@@ -1,0 +1,46 @@
+# ── IDE / Editores ─────────────────────────────────────────────
+.idea/
+.vscode/
+*.suo
+*.user
+*.swp
+*.swo
+*~
+
+# ── Sistema Operativo ───────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+
+# ── Dependencias (por si se agrega un bundler en el futuro) ─────
+node_modules/
+bower_components/
+
+# ── Entornos y secretos ─────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Build / Dist ────────────────────────────────────────────────
+dist/
+build/
+.cache/
+*.min.js.map
+
+# ── Logs ────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Temporales ──────────────────────────────────────────────────
+*.tmp
+*.temp

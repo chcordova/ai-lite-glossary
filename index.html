@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diccionario Interactivo: IA & Automatización</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="min-h-screen flex flex-col font-sans relative">
+
+<header class="glass-header sticky top-0 z-50 px-6 py-4 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white shadow-lg">
+        <i class="ph ph-books text-2xl"></i>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold tracking-tight text-slate-900">AI Glossary</h1>
+        <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Concepts & Technologies</p>
+      </div>
+    </div>
+
+    <div class="w-full md:w-96 relative">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <i class="ph ph-magnifying-glass text-slate-400 text-lg"></i>
+      </div>
+      <input type="text" id="searchInput"
+             class="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-full leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm shadow-sm"
+             placeholder="Search term (e.g. RAG, Token, LLM...)">
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow p-6 max-w-6xl mx-auto w-full">
+  <div class="mb-8 text-center md:text-left mt-4">
+    <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Descubre el idioma del futuro</h2>
+    <p class="text-slate-600 max-w-2xl">El mundo de la Inteligencia Artificial y automatización tiene su propio vocabulario. Usa este diccionario interactivo para entender cómo funciona la tecnología que está cambiando el mundo.</p>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="flex flex-wrap gap-2 mb-8 justify-center md:justify-start" id="filterContainer">
+    <button class="filter-btn active px-4 py-2 rounded-full text-sm font-semibold transition-all bg-slate-800 text-white shadow-md hover:bg-slate-700" data-filter="all">
+      <i class="ph ph-squares-four mr-1"></i> Todos
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200" data-filter="fundamentales">
+      <i class="ph ph-brain mr-1"></i> Fundamentales
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-fuchsia-50 hover:text-fuchsia-600 hover:border-fuchsia-200" data-filter="arquitectura">
+      <i class="ph ph-cpu mr-1"></i> Arquitectura
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" data-filter="automatizacion">
+      <i class="ph ph-robot mr-1"></i> Automatización
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-amber-50 hover:text-amber-600 hover:border-amber-200" data-filter="uso">
+      <i class="ph ph-chat-teardrop-text mr-1"></i> Uso Diario
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200" data-filter="optimizacion">
+      <i class="ph ph-sliders mr-1"></i> Entrenamiento
+    </button>
+    <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-cyan-50 hover:text-cyan-600 hover:border-cyan-200" data-filter="operaciones">
+      <i class="ph ph-hard-drives mr-1"></i> Producción
+    </button>
+  </div>
+
+  <!-- Cards Grid -->
+  <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Cards are injected by app.js -->
+  </div>
+
+  <!-- Empty State -->
+  <div id="emptyState" class="hidden flex-col items-center justify-center py-20 text-center">
+    <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+      <i class="ph ph-ghost text-4xl text-slate-400"></i>
+    </div>
+    <h3 class="text-xl font-bold text-slate-800">We couldn't find that term</h3>
+    <p class="text-slate-500 mt-2">Try searching with different words or check the spelling.</p>
+  </div>
+</main>
+
+<footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-slate-500 text-sm">
+  <p>Literary and educational resource on AI & Machine Learning.</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

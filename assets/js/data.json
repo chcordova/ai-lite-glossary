@@ -1,0 +1,290 @@
+[
+  {
+    "term": "IA",
+    "full": "Inteligencia Artificial",
+    "desc": "El campo general de la informática enfocado en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana (razonamiento, aprendizaje, percepción).",
+    "category": "fundamentales",
+    "icon": "ph-brain",
+    "color": "indigo"
+  },
+  {
+    "term": "ML",
+    "full": "Machine Learning (Aprendizaje Automático)",
+    "desc": "Rama de la IA donde no se programa con reglas estrictas, sino que se alimenta al software con datos para que aprenda patrones por sí mismo.",
+    "category": "fundamentales",
+    "icon": "ph-chart-line-up",
+    "color": "indigo"
+  },
+  {
+    "term": "DL",
+    "full": "Deep Learning (Aprendizaje Profundo)",
+    "desc": "Técnica avanzada de ML que utiliza redes neuronales artificiales con múltiples capas para procesar datos de forma similar al cerebro humano.",
+    "category": "fundamentales",
+    "icon": "ph-network",
+    "color": "indigo"
+  },
+  {
+    "term": "LLM",
+    "full": "Large Language Model",
+    "desc": "Modelos de IA entrenados con cantidades masivas de texto para entender y generar lenguaje humano. (Ej: GPT-4, Gemini).",
+    "category": "fundamentales",
+    "icon": "ph-books",
+    "color": "indigo"
+  },
+  {
+    "term": "SLM",
+    "full": "Small Language Model",
+    "desc": "Versiones compactas y eficientes de los LLM, diseñadas para correr en dispositivos locales (como tu celular) consumiendo menos recursos.",
+    "category": "fundamentales",
+    "icon": "ph-device-mobile",
+    "color": "indigo"
+  },
+  {
+    "term": "AGI",
+    "full": "Artificial General Intelligence",
+    "desc": "Nivel hipotético de IA que igualaría o superaría la inteligencia humana en cualquier tarea intelectual. Es el objetivo a largo plazo de la industria.",
+    "category": "fundamentales",
+    "icon": "ph-planet",
+    "color": "indigo"
+  },
+  {
+    "term": "Multimodal",
+    "full": "Multimodalidad",
+    "desc": "La capacidad avanzada de una IA para procesar y entender diferentes tipos de información al mismo tiempo (texto, imágenes, audio y video).",
+    "category": "fundamentales",
+    "icon": "ph-cube",
+    "color": "indigo"
+  },
+  {
+    "term": "RAG",
+    "full": "Retrieval-Augmented Generation",
+    "desc": "Técnica donde un LLM se conecta a una base de datos externa. Antes de responder, 'busca' la información correcta y genera la respuesta basada en esos datos, evitando inventar cosas.",
+    "category": "arquitectura",
+    "icon": "ph-magnifying-glass-plus",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Fine-tuning",
+    "full": "Ajuste Fino",
+    "desc": "El proceso de tomar un modelo de IA pre-entrenado y darle un entrenamiento adicional con datos específicos para volverlo experto en un nicho (ej. jerga médica).",
+    "category": "arquitectura",
+    "icon": "ph-sliders-horizontal",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Embeddings",
+    "full": "Incrustaciones",
+    "desc": "La forma en que la IA entiende palabras. Convierte texto o imágenes en largas listas de números (vectores) para calcular matemáticamente qué conceptos están relacionados.",
+    "category": "arquitectura",
+    "icon": "ph-brackets-curly",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Vector Database",
+    "full": "Base de Datos Vectorial",
+    "desc": "Base de datos diseñada específicamente para almacenar embeddings. Fundamental para que el sistema RAG funcione de manera rápida y precisa.",
+    "category": "arquitectura",
+    "icon": "ph-database",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Transformer",
+    "full": "Arquitectura Transformer",
+    "desc": "Arquitectura de red neuronal (la 'T' en ChatGPT) que revolucionó la IA. Permite que el modelo preste atención al contexto de toda una frase, no solo a palabras sueltas.",
+    "category": "arquitectura",
+    "icon": "ph-lightning",
+    "color": "fuchsia"
+  },
+  {
+    "term": "MoE",
+    "full": "Mixture of Experts (Mezcla de Expertos)",
+    "desc": "Arquitectura donde un modelo masivo se divide en múltiples 'cerebros' pequeños especializados. Un enrutador decide qué experto responde cada consulta.",
+    "category": "arquitectura",
+    "icon": "ph-git-merge",
+    "color": "fuchsia"
+  },
+  {
+    "term": "GAN",
+    "full": "Generative Adversarial Network",
+    "desc": "Sistema donde dos IAs compiten: una genera contenido falso y la otra intenta descubrirlo. Esta 'pelea' resulta en imágenes o audios hiperrealistas.",
+    "category": "arquitectura",
+    "icon": "ph-sword",
+    "color": "fuchsia"
+  },
+  {
+    "term": "RPA",
+    "full": "Robotic Process Automation",
+    "desc": "Software que imita acciones humanas repetitivas (clics, copiar/pegar). Es rápido, pero tradicionalmente no es 'inteligente' (si la pantalla cambia, se rompe).",
+    "category": "automatizacion",
+    "icon": "ph-robot",
+    "color": "emerald"
+  },
+  {
+    "term": "CPA",
+    "full": "Cognitive Process Automation",
+    "desc": "Evolución del RPA. Combina automatización con IA (reconocimiento de texto, visión). Permite automatizar procesos complejos con datos desestructurados.",
+    "category": "automatizacion",
+    "icon": "ph-head-circuit",
+    "color": "emerald"
+  },
+  {
+    "term": "MCP",
+    "full": "Model Context Protocol",
+    "desc": "Estándar de código abierto ('enchufe universal') que permite que modelos de IA se conecten de forma segura a herramientas y bases de datos locales o en la nube.",
+    "category": "automatizacion",
+    "icon": "ph-plug",
+    "color": "emerald"
+  },
+  {
+    "term": "AI Agent",
+    "full": "Agente de IA",
+    "desc": "Sistema diseñado para pensar paso a paso, usar herramientas y ejecutar acciones para lograr un objetivo de forma autónoma, no solo responder preguntas.",
+    "category": "automatizacion",
+    "icon": "ph-user-gear",
+    "color": "emerald"
+  },
+  {
+    "term": "API",
+    "full": "Application Programming Interface",
+    "desc": "Un puente de software que permite que dos aplicaciones se comuniquen. Es la forma en que tu app 'habla' con el servidor de la IA.",
+    "category": "automatizacion",
+    "icon": "ph-code",
+    "color": "emerald"
+  },
+  {
+    "term": "ReAct",
+    "full": "Reasoning and Acting",
+    "desc": "Ciclo de trabajo para Agentes donde la IA razona, actúa usando una herramienta, observa el resultado y vuelve a razonar, logrando resolver tareas con autonomía.",
+    "category": "automatizacion",
+    "icon": "ph-arrows-clockwise",
+    "color": "emerald"
+  },
+  {
+    "term": "Prompt",
+    "full": "Instrucción",
+    "desc": "La instrucción, pregunta o texto inicial que le das a la IA para que genere una respuesta o realice una acción.",
+    "category": "uso",
+    "icon": "ph-terminal-window",
+    "color": "amber"
+  },
+  {
+    "term": "Prompt Eng.",
+    "full": "Ingeniería de Prompts",
+    "desc": "La habilidad (o arte) de diseñar y estructurar instrucciones de la manera más efectiva posible para obtener el mejor resultado exacto del modelo.",
+    "category": "uso",
+    "icon": "ph-magic-wand",
+    "color": "amber"
+  },
+  {
+    "term": "Token",
+    "full": "Unidad de Procesamiento",
+    "desc": "Unidad básica de datos que lee una IA. Puede ser una palabra, una sílaba o carácter. (Aprox. 100 tokens = 75 palabras en español).",
+    "category": "uso",
+    "icon": "ph-puzzle-piece",
+    "color": "amber"
+  },
+  {
+    "term": "Context Window",
+    "full": "Ventana de Contexto",
+    "desc": "Cantidad máxima de información que la IA puede 'recordar' a la vez en una conversación. Si se supera, olvidará el inicio del texto.",
+    "category": "uso",
+    "icon": "ph-frame-corners",
+    "color": "amber"
+  },
+  {
+    "term": "Hallucination",
+    "full": "Alucinación",
+    "desc": "Cuando la IA genera una respuesta que suena convincente y segura, pero que es falsa o inventada. Ocurre porque predice la palabra que suena mejor.",
+    "category": "uso",
+    "icon": "ph-warning-circle",
+    "color": "amber"
+  },
+  {
+    "term": "CoT",
+    "full": "Chain of Thought (Cadena de Pensamiento)",
+    "desc": "Técnica donde le pides a la IA que 'piense paso a paso', mostrando su lógica antes de responder. Reduce notablemente los errores en tareas complejas.",
+    "category": "uso",
+    "icon": "ph-list-numbers",
+    "color": "amber"
+  },
+  {
+    "term": "Zero/Few-shot",
+    "full": "Aprendizaje Zero-shot y Few-shot",
+    "desc": "Darle una tarea a la IA sin ejemplos previos (Zero) o con 2 o 3 ejemplos claros (Few) en el prompt para que replique un patrón o formato exacto.",
+    "category": "uso",
+    "icon": "ph-copy",
+    "color": "amber"
+  },
+  {
+    "term": "DSPy",
+    "full": "Framework DSPy",
+    "desc": "Marco de trabajo que permite 'programar' el comportamiento del modelo y delegarle al sistema que optimice matemáticamente los prompts de forma automática.",
+    "category": "uso",
+    "icon": "ph-braces",
+    "color": "amber"
+  },
+  {
+    "term": "RLHF",
+    "full": "Reinforcement Learning from Human Feedback",
+    "desc": "Técnica que entrena a la IA usando calificaciones humanas para que aprenda qué respuestas son útiles y seguras, dándole un tono conversacional.",
+    "category": "optimizacion",
+    "icon": "ph-thumbs-up",
+    "color": "rose"
+  },
+  {
+    "term": "DPO",
+    "full": "Direct Preference Optimization",
+    "desc": "Técnica moderna y ligera que logra el mismo objetivo que RLHF (alinear la IA con humanos) pero con matemáticas más simples y menos costo de cómputo.",
+    "category": "optimizacion",
+    "icon": "ph-target",
+    "color": "rose"
+  },
+  {
+    "term": "LoRA",
+    "full": "Low-Rank Adaptation",
+    "desc": "Técnica de ajuste fino donde solo se entrena una pequeña capa adicional sobre el modelo original, permitiendo personalizar una IA rápida y económicamente.",
+    "category": "optimizacion",
+    "icon": "ph-stack",
+    "color": "rose"
+  },
+  {
+    "term": "QLoRA",
+    "full": "Quantized LoRA",
+    "desc": "Evolución de LoRA que comprime los datos, permitiendo entrenar modelos masivos en tarjetas gráficas (GPUs) de computadoras de consumo normales.",
+    "category": "optimizacion",
+    "icon": "ph-arrows-in",
+    "color": "rose"
+  },
+  {
+    "term": "Quantization",
+    "full": "Cuantización",
+    "desc": "Compresión de un modelo de IA reduciendo la precisión de sus números. Lo hace más ligero y rápido, perdiendo solo una fracción mínima de su 'inteligencia'.",
+    "category": "optimizacion",
+    "icon": "ph-file-zip",
+    "color": "rose"
+  },
+  {
+    "term": "MLOps",
+    "full": "Machine Learning Operations",
+    "desc": "Conjunto de prácticas y herramientas (similares a DevOps) para llevar un modelo desde la computadora del programador hasta un servidor en producción de forma escalable.",
+    "category": "operaciones",
+    "icon": "ph-hard-drives",
+    "color": "cyan"
+  },
+  {
+    "term": "KV Cache",
+    "full": "Key-Value Cache",
+    "desc": "Memoria a corto plazo que usan los LLMs para no recalcular palabras anteriores al generar texto nuevo. Su optimización es clave para que la IA responda rápido.",
+    "category": "operaciones",
+    "icon": "ph-clock-counter-clockwise",
+    "color": "cyan"
+  },
+  {
+    "term": "Hugging Face",
+    "full": "Hugging Face Hub",
+    "desc": "Conocido como el 'GitHub de la IA'. Es la plataforma donde la comunidad y las grandes empresas comparten modelos de IA Open Source, datasets y herramientas.",
+    "category": "operaciones",
+    "icon": "ph-smiley",
+    "color": "cyan"
+  }
+]
