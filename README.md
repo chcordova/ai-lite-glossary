@@ -66,7 +66,9 @@ Cada término en `data.json` guarda su nombre completo (`full`) y descripción (
 ```json
 {
   "term": "RAG",
-  "full": { "es": "Retrieval-Augmented Generation", "en": "Retrieval-Augmented Generation" },
+  "full": { 
+    "es": "Retrieval-Augmented Generation", 
+    "en": "Retrieval-Augmented Generation" },
   "desc": {
     "es": "Técnica donde un LLM se conecta a una base de datos externa...",
     "en": "A technique where an LLM connects to an external database..."

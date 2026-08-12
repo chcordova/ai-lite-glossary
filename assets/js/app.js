@@ -19,8 +19,8 @@ const SUPPORTED_LANGS = [
 const categoryLabels = {
   es: {
     all:             'Todos',
-    fundamentales:   'Conceptos Core',
-    arquitectura:    'Arquitectura.',
+    fundamentales:   'Fundamentales',
+    arquitectura:    'Arquitectura',
     automatizacion:  'Automatización',
     uso:             'Uso Diario',
     optimizacion:    'Entrenamiento',
