@@ -9,32 +9,136 @@ const colorConfig = {
   cyan:    { bgLight: 'bg-cyan-50',    text: 'text-cyan-600',    border: 'border-cyan-100',    iconBg: 'bg-cyan-100'    }
 };
 
+// Add a new language by adding an entry here (e.g. { code: 'pt', label: 'PT' }).
+const SUPPORTED_LANGS = [
+  { code: 'es', label: 'ES' },
+  { code: 'en', label: 'EN' }
+];
+
+// Filter button labels, per language. "all" covers the "Todos/All" button.
 const categoryLabels = {
-  'fundamentales': 'Conceptos Fundamentales',
-  'arquitectura':  'Arquitectura y Proc.',
-  'automatizacion':'Automatización',
-  'uso':           'Uso Diario',
-  'optimizacion':  'Entrenamiento',
-  'operaciones':   'Producción (MLOps)'
+  es: {
+    all:             'Todos',
+    fundamentales:   'Conceptos Fundamentales',
+    arquitectura:    'Arquitectura y Proc.',
+    automatizacion:  'Automatización',
+    uso:             'Uso Diario',
+    optimizacion:    'Entrenamiento',
+    operaciones:     'Producción (MLOps)'
+  },
+  en: {
+    all:             'All',
+    fundamentales:   'Core Concepts',
+    arquitectura:    'Architecture & Proc.',
+    automatizacion:  'Automation',
+    uso:             'Daily Usage',
+    optimizacion:    'Training',
+    operaciones:     'Production (MLOps)'
+  }
 };
 
-const cardsGrid   = document.getElementById('cardsGrid');
-const emptyState  = document.getElementById('emptyState');
-const searchInput = document.getElementById('searchInput');
-const filterBtns  = document.querySelectorAll('.filter-btn');
+// Category description panel, per language.
+const categoryDescriptions = {
+  es: {
+    all:             'Explora las seis etapas del ciclo de vida de un sistema de IA: desde los fundamentos teóricos hasta la operación en producción.',
+    fundamentales:   'Conceptos teóricos y éticos que definen la naturaleza de los sistemas inteligentes: de la IA Estrecha a la hipotética AGI/ASI, y el equilibrio entre aprendizaje basado en datos y en conocimiento.',
+    arquitectura:    'Los bloques matemáticos y estructurales de los modelos: Transformers, GANs, Difusión, Mixture of Experts, embeddings y bases de datos vectoriales.',
+    automatizacion:  'La evolución de la automatización rígida (RPA) hacia agentes autónomos que planifican, invocan herramientas y ejecutan flujos con protocolos como MCP y ReAct.',
+    uso:             'La capa de interacción humano-máquina: prompt engineering, ventana de contexto, tokens y fenómenos como la alucinación o la sicofancia del modelo.',
+    optimizacion:    'Técnicas post-entrenamiento (RLHF, DPO, LoRA, cuantización) que alinean y comprimen los modelos para hacerlos más seguros, eficientes y accesibles.',
+    operaciones:     'La logística de desplegar IA a escala: GPUs/TPUs, MLOps/LLMOps, monitoreo de drift y caches KV que mantienen los sistemas en producción.'
+  },
+  en: {
+    all:             'Explore the six stages of an AI system\'s lifecycle: from theoretical foundations to production operation.',
+    fundamentales:   'Theoretical and ethical concepts that define the nature of intelligent systems: from Narrow AI to hypothetical AGI/ASI, and the balance between data-driven and knowledge-driven learning.',
+    arquitectura:    'The mathematical and structural building blocks of models: Transformers, GANs, Diffusion, Mixture of Experts, embeddings, and vector databases.',
+    automatizacion:  'The evolution from rigid automation (RPA) to autonomous agents that plan, invoke tools, and execute workflows using protocols like MCP and ReAct.',
+    uso:             'The human-machine interaction layer: prompt engineering, context window, tokens, and phenomena like hallucination or model sycophancy.',
+    optimizacion:    'Post-training techniques (RLHF, DPO, LoRA, quantization) that align and compress models to make them safer, more efficient, and more accessible.',
+    operaciones:     'The logistics of deploying AI at scale: GPUs/TPUs, MLOps/LLMOps, drift monitoring, and KV caches that keep systems running in production.'
+  }
+};
+
+const cardsGrid        = document.getElementById('cardsGrid');
+const emptyState       = document.getElementById('emptyState');
+const searchInput      = document.getElementById('searchInput');
+const filterBtns       = document.querySelectorAll('.filter-btn');
+const statTotal        = document.getElementById('statTotal');
+const categoryInfoText = document.getElementById('categoryInfoText');
+const langSwitch       = document.getElementById('langSwitch');
 
 let currentFilter = 'all';
 let searchQuery   = '';
+let currentLang   = localStorage.getItem('glossaryLang') || 'es';
+if (!SUPPORTED_LANGS.some(l => l.code === currentLang)) currentLang = SUPPORTED_LANGS[0].code;
+
+function label(key) {
+  const dict = categoryLabels[currentLang] || categoryLabels.es;
+  return dict[key] || categoryLabels.es[key];
+}
+
+function description(key) {
+  const dict = categoryDescriptions[currentLang] || categoryDescriptions.es;
+  return dict[key] || categoryDescriptions.es[key];
+}
+
+// Refreshes all chrome text that depends on language/filter but isn't part of the cards grid.
+function updateStaticTexts() {
+  filterBtns.forEach(btn => {
+    const key = btn.getAttribute('data-filter');
+    const span = btn.querySelector('.filter-label');
+    if (span) span.textContent = label(key);
+  });
+  categoryInfoText.textContent = description(currentFilter);
+}
+
+function setActiveLangButton() {
+  langSwitch.querySelectorAll('.lang-btn').forEach(b => {
+    const isActive = b.getAttribute('data-lang') === currentLang;
+    b.classList.toggle('active', isActive);
+    b.classList.toggle('bg-slate-800', isActive);
+    b.classList.toggle('text-white', isActive);
+    b.classList.toggle('bg-slate-100', !isActive);
+    b.classList.toggle('text-slate-600', !isActive);
+  });
+}
+
+function renderLangSwitch() {
+  langSwitch.innerHTML = SUPPORTED_LANGS.map(l => `
+    <button class="lang-btn text-xs font-semibold px-2 py-0.5 rounded-full transition-all" data-lang="${l.code}">${l.label}</button>
+  `).join('');
+
+  setActiveLangButton();
+
+  langSwitch.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const lang = e.currentTarget.getAttribute('data-lang');
+      if (lang === currentLang) return;
+
+      currentLang = lang;
+      localStorage.setItem('glossaryLang', currentLang);
+
+      setActiveLangButton();
+      updateStaticTexts();
+      renderCards();
+    });
+  });
+}
 
 function renderCards() {
   const filteredData = dictionaryData.filter(item => {
     const matchesFilter = currentFilter === 'all' || item.category === currentFilter;
+    const full = item.full[currentLang] || item.full.es;
+    const desc = item.desc[currentLang] || item.desc.es;
+    const q = searchQuery.toLowerCase();
     const matchesSearch =
-      item.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.full.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+      item.term.toLowerCase().includes(q) ||
+      full.toLowerCase().includes(q) ||
+      desc.toLowerCase().includes(q);
     return matchesFilter && matchesSearch;
   });
+
+  if (statTotal) statTotal.textContent = filteredData.length;
 
   cardsGrid.innerHTML = '';
 
@@ -50,6 +154,8 @@ function renderCards() {
     filteredData.forEach((item, index) => {
       const theme = colorConfig[item.color];
       const card  = document.createElement('div');
+      const full  = item.full[currentLang] || item.full.es;
+      const desc  = item.desc[currentLang] || item.desc.es;
 
       card.style.animationDelay = `${index * 50}ms`;
       card.className = `card-enter bg-white rounded-2xl p-6 border ${theme.border} shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group cursor-default`;
@@ -62,12 +168,12 @@ function renderCards() {
               <i class="${item.icon}"></i>
             </div>
             <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${theme.bgLight} ${theme.text}">
-              ${categoryLabels[item.category]}
+              ${label(item.category)}
             </span>
           </div>
           <h3 class="text-2xl font-bold text-slate-900 mb-1 tracking-tight">${item.term}</h3>
-          <p class="text-sm font-medium ${theme.text} mb-3">${item.full}</p>
-          <p class="text-slate-600 text-sm leading-relaxed mt-auto">${item.desc}</p>
+          <p class="text-sm font-medium ${theme.text} mb-3">${full}</p>
+          <p class="text-slate-600 text-sm leading-relaxed mt-auto">${desc}</p>
         </div>
       `;
       cardsGrid.appendChild(card);
@@ -96,9 +202,13 @@ filterBtns.forEach(btn => {
     targetBtn.classList.add('bg-slate-800', 'text-white', 'shadow-md');
 
     currentFilter = targetBtn.getAttribute('data-filter');
+    updateStaticTexts();
     renderCards();
   });
 });
+
+renderLangSwitch();
+updateStaticTexts();
 
 fetch('assets/js/data.json')
   .then(res => {
@@ -110,3 +220,4 @@ fetch('assets/js/data.json')
     renderCards();
   })
   .catch(err => console.error('Error cargando data.json:', err));
+

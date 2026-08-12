@@ -1,290 +1,1668 @@
 [
   {
     "term": "IA",
-    "full": "Inteligencia Artificial",
-    "desc": "El campo general de la informática enfocado en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana (razonamiento, aprendizaje, percepción).",
+    "full": {
+      "es": "Inteligencia Artificial",
+      "en": "Artificial Intelligence"
+    },
+    "desc": {
+      "es": "El campo general de la informática enfocado en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana (razonamiento, aprendizaje, percepción).",
+      "en": "The general field of computer science focused on building systems capable of performing tasks that normally require human intelligence (reasoning, learning, perception)."
+    },
     "category": "fundamentales",
     "icon": "ph-brain",
     "color": "indigo"
   },
   {
     "term": "ML",
-    "full": "Machine Learning (Aprendizaje Automático)",
-    "desc": "Rama de la IA donde no se programa con reglas estrictas, sino que se alimenta al software con datos para que aprenda patrones por sí mismo.",
+    "full": {
+      "es": "Machine Learning (Aprendizaje Automático)",
+      "en": "Machine Learning"
+    },
+    "desc": {
+      "es": "Rama de la IA donde no se programa con reglas estrictas, sino que se alimenta al software con datos para que aprenda patrones por sí mismo.",
+      "en": "A branch of AI where software isn't programmed with strict rules, but instead is fed data so it can learn patterns on its own."
+    },
     "category": "fundamentales",
     "icon": "ph-chart-line-up",
     "color": "indigo"
   },
   {
     "term": "DL",
-    "full": "Deep Learning (Aprendizaje Profundo)",
-    "desc": "Técnica avanzada de ML que utiliza redes neuronales artificiales con múltiples capas para procesar datos de forma similar al cerebro humano.",
+    "full": {
+      "es": "Deep Learning (Aprendizaje Profundo)",
+      "en": "Deep Learning"
+    },
+    "desc": {
+      "es": "Técnica avanzada de ML que utiliza redes neuronales artificiales con múltiples capas para procesar datos de forma similar al cerebro humano.",
+      "en": "An advanced ML technique that uses artificial neural networks with multiple layers to process data in a way similar to the human brain."
+    },
     "category": "fundamentales",
     "icon": "ph-network",
     "color": "indigo"
   },
   {
     "term": "LLM",
-    "full": "Large Language Model",
-    "desc": "Modelos de IA entrenados con cantidades masivas de texto para entender y generar lenguaje humano. (Ej: GPT-4, Gemini).",
+    "full": {
+      "es": "Large Language Model",
+      "en": "Large Language Model"
+    },
+    "desc": {
+      "es": "Tipo de modelo de IA entrenado en un conjunto de datos amplio que puede generar texto similar al humano, sirviendo para entender y crear lenguaje. (Ej: GPT-4, Gemini).",
+      "en": "A type of AI model trained on a massive dataset that can generate human-like text, used to understand and create language. (E.g., GPT-4, Gemini)."
+    },
     "category": "fundamentales",
     "icon": "ph-books",
     "color": "indigo"
   },
   {
     "term": "SLM",
-    "full": "Small Language Model",
-    "desc": "Versiones compactas y eficientes de los LLM, diseñadas para correr en dispositivos locales (como tu celular) consumiendo menos recursos.",
+    "full": {
+      "es": "Small Language Model",
+      "en": "Small Language Model"
+    },
+    "desc": {
+      "es": "Versiones compactas y eficientes de los LLM, diseñadas para correr en dispositivos locales (como tu celular) consumiendo menos recursos.",
+      "en": "Compact, efficient versions of LLMs designed to run on local devices (like your phone) while consuming fewer resources."
+    },
     "category": "fundamentales",
     "icon": "ph-device-mobile",
     "color": "indigo"
   },
   {
     "term": "AGI",
-    "full": "Artificial General Intelligence",
-    "desc": "Nivel hipotético de IA que igualaría o superaría la inteligencia humana en cualquier tarea intelectual. Es el objetivo a largo plazo de la industria.",
+    "full": {
+      "es": "Artificial General Intelligence",
+      "en": "Artificial General Intelligence"
+    },
+    "desc": {
+      "es": "Nivel hipotético de IA que igualaría o superaría la inteligencia humana en cualquier tarea intelectual. Es el objetivo a largo plazo de la industria.",
+      "en": "A hypothetical level of AI that would match or surpass human intelligence at any intellectual task. It's the industry's long-term goal."
+    },
     "category": "fundamentales",
     "icon": "ph-planet",
     "color": "indigo"
   },
   {
     "term": "Multimodal",
-    "full": "Multimodalidad",
-    "desc": "La capacidad avanzada de una IA para procesar y entender diferentes tipos de información al mismo tiempo (texto, imágenes, audio y video).",
+    "full": {
+      "es": "Multimodalidad",
+      "en": "Multimodality"
+    },
+    "desc": {
+      "es": "Se refiere a los modelos que pueden entender y generar información a través de varios tipos de datos al mismo tiempo, como texto e imágenes.",
+      "en": "Refers to models that can understand and generate information across several types of data at once, such as text and images."
+    },
     "category": "fundamentales",
     "icon": "ph-cube",
     "color": "indigo"
   },
   {
     "term": "RAG",
-    "full": "Retrieval-Augmented Generation",
-    "desc": "Técnica donde un LLM se conecta a una base de datos externa. Antes de responder, 'busca' la información correcta y genera la respuesta basada en esos datos, evitando inventar cosas.",
+    "full": {
+      "es": "Retrieval-Augmented Generation",
+      "en": "Retrieval-Augmented Generation"
+    },
+    "desc": {
+      "es": "Técnica donde un LLM se conecta a una base de datos externa. Antes de responder, 'busca' la información correcta y genera la respuesta basada en esos datos, evitando inventar cosas.",
+      "en": "A technique where an LLM connects to an external database. Before answering, it 'looks up' the correct information and generates a response based on that data, avoiding made-up answers."
+    },
     "category": "arquitectura",
     "icon": "ph-magnifying-glass-plus",
     "color": "fuchsia"
   },
   {
     "term": "Fine-tuning",
-    "full": "Ajuste Fino",
-    "desc": "El proceso de tomar un modelo de IA pre-entrenado y darle un entrenamiento adicional con datos específicos para volverlo experto en un nicho (ej. jerga médica).",
+    "full": {
+      "es": "Ajuste Fino",
+      "en": "Fine-Tuning"
+    },
+    "desc": {
+      "es": "Una técnica en aprendizaje automático donde los modelos reciben ajustes finos basados en instrucciones específicas dadas en el conjunto de datos, para volverlo experto en un nicho.",
+      "en": "A machine learning technique where a model receives additional, focused training on a specific dataset to make it an expert in a niche."
+    },
     "category": "arquitectura",
     "icon": "ph-sliders-horizontal",
     "color": "fuchsia"
   },
   {
     "term": "Embeddings",
-    "full": "Incrustaciones",
-    "desc": "La forma en que la IA entiende palabras. Convierte texto o imágenes en largas listas de números (vectores) para calcular matemáticamente qué conceptos están relacionados.",
+    "full": {
+      "es": "Incrustaciones",
+      "en": "Embeddings"
+    },
+    "desc": {
+      "es": "La forma en que la IA entiende palabras. Convierte texto o imágenes en largas listas de números (vectores) para calcular matemáticamente qué conceptos están relacionados.",
+      "en": "The way AI 'understands' words. It converts text or images into long lists of numbers (vectors) to mathematically calculate which concepts are related."
+    },
     "category": "arquitectura",
     "icon": "ph-brackets-curly",
     "color": "fuchsia"
   },
   {
     "term": "Vector Database",
-    "full": "Base de Datos Vectorial",
-    "desc": "Base de datos diseñada específicamente para almacenar embeddings. Fundamental para que el sistema RAG funcione de manera rápida y precisa.",
+    "full": {
+      "es": "Base de Datos Vectorial",
+      "en": "Vector Database"
+    },
+    "desc": {
+      "es": "Base de datos diseñada específicamente para almacenar embeddings. Fundamental para que el sistema RAG funcione de manera rápida y precisa.",
+      "en": "A database designed specifically to store embeddings. Essential for a RAG system to work quickly and accurately."
+    },
     "category": "arquitectura",
     "icon": "ph-database",
     "color": "fuchsia"
   },
   {
     "term": "Transformer",
-    "full": "Arquitectura Transformer",
-    "desc": "Arquitectura de red neuronal (la 'T' en ChatGPT) que revolucionó la IA. Permite que el modelo preste atención al contexto de toda una frase, no solo a palabras sueltas.",
+    "full": {
+      "es": "Arquitectura Transformer",
+      "en": "Transformer Architecture"
+    },
+    "desc": {
+      "es": "Arquitectura de red neuronal (la 'T' en ChatGPT) que revolucionó la IA. Permite que el modelo preste atención al contexto de toda una frase, no solo a palabras sueltas.",
+      "en": "The neural network architecture (the 'T' in ChatGPT) that revolutionized AI. It lets the model pay attention to the context of an entire sentence, not just isolated words."
+    },
     "category": "arquitectura",
     "icon": "ph-lightning",
     "color": "fuchsia"
   },
   {
     "term": "MoE",
-    "full": "Mixture of Experts (Mezcla de Expertos)",
-    "desc": "Arquitectura donde un modelo masivo se divide en múltiples 'cerebros' pequeños especializados. Un enrutador decide qué experto responde cada consulta.",
+    "full": {
+      "es": "Mixture of Experts (Mezcla de Expertos)",
+      "en": "Mixture of Experts"
+    },
+    "desc": {
+      "es": "Arquitectura donde un modelo masivo se divide en múltiples 'cerebros' pequeños especializados. Un enrutador decide qué experto responde cada consulta.",
+      "en": "An architecture where a massive model is split into multiple small, specialized 'brains.' A router decides which expert answers each query."
+    },
     "category": "arquitectura",
     "icon": "ph-git-merge",
     "color": "fuchsia"
   },
   {
     "term": "GAN",
-    "full": "Generative Adversarial Network",
-    "desc": "Sistema donde dos IAs compiten: una genera contenido falso y la otra intenta descubrirlo. Esta 'pelea' resulta en imágenes o audios hiperrealistas.",
+    "full": {
+      "es": "Generative Adversarial Network",
+      "en": "Generative Adversarial Network"
+    },
+    "desc": {
+      "es": "Sistema donde dos IAs compiten: una genera contenido falso y la otra intenta descubrirlo. Esta 'pelea' resulta en imágenes o audios hiperrealistas.",
+      "en": "A system where two AIs compete: one generates fake content and the other tries to detect it. This 'fight' results in hyper-realistic images or audio."
+    },
     "category": "arquitectura",
     "icon": "ph-sword",
     "color": "fuchsia"
   },
   {
     "term": "RPA",
-    "full": "Robotic Process Automation",
-    "desc": "Software que imita acciones humanas repetitivas (clics, copiar/pegar). Es rápido, pero tradicionalmente no es 'inteligente' (si la pantalla cambia, se rompe).",
+    "full": {
+      "es": "Robotic Process Automation",
+      "en": "Robotic Process Automation"
+    },
+    "desc": {
+      "es": "Software que imita acciones humanas repetitivas (clics, copiar/pegar). Es rápido, pero tradicionalmente no es 'inteligente' (si la pantalla cambia, se rompe).",
+      "en": "Software that mimics repetitive human actions (clicks, copy/paste). It's fast, but traditionally not 'intelligent' — if the screen changes, it breaks."
+    },
     "category": "automatizacion",
     "icon": "ph-robot",
     "color": "emerald"
   },
   {
     "term": "CPA",
-    "full": "Cognitive Process Automation",
-    "desc": "Evolución del RPA. Combina automatización con IA (reconocimiento de texto, visión). Permite automatizar procesos complejos con datos desestructurados.",
+    "full": {
+      "es": "Cognitive Process Automation",
+      "en": "Cognitive Process Automation"
+    },
+    "desc": {
+      "es": "Evolución del RPA. Combina automatización con IA (reconocimiento de texto, visión). Permite automatizar procesos complejos con datos desestructurados.",
+      "en": "An evolution of RPA. It combines automation with AI (text recognition, vision), enabling the automation of complex processes involving unstructured data."
+    },
     "category": "automatizacion",
     "icon": "ph-head-circuit",
     "color": "emerald"
   },
   {
     "term": "MCP",
-    "full": "Model Context Protocol",
-    "desc": "Estándar de código abierto ('enchufe universal') que permite que modelos de IA se conecten de forma segura a herramientas y bases de datos locales o en la nube.",
+    "full": {
+      "es": "Model Context Protocol",
+      "en": "Model Context Protocol"
+    },
+    "desc": {
+      "es": "Estándar de código abierto ('enchufe universal') que permite que modelos de IA se conecten de forma segura a herramientas y bases de datos locales o en la nube.",
+      "en": "An open-source standard (a 'universal plug') that lets AI models securely connect to tools and databases, whether local or in the cloud."
+    },
     "category": "automatizacion",
     "icon": "ph-plug",
     "color": "emerald"
   },
   {
     "term": "AI Agent",
-    "full": "Agente de IA",
-    "desc": "Sistema diseñado para pensar paso a paso, usar herramientas y ejecutar acciones para lograr un objetivo de forma autónoma, no solo responder preguntas.",
+    "full": {
+      "es": "Agente de IA",
+      "en": "AI Agent"
+    },
+    "desc": {
+      "es": "Sistema diseñado para pensar paso a paso, usar herramientas y ejecutar acciones para lograr un objetivo de forma autónoma, no solo responder preguntas.",
+      "en": "A system designed to think step by step, use tools, and take actions to achieve a goal autonomously — not just answer questions."
+    },
     "category": "automatizacion",
     "icon": "ph-user-gear",
     "color": "emerald"
   },
   {
     "term": "API",
-    "full": "Application Programming Interface",
-    "desc": "Un puente de software que permite que dos aplicaciones se comuniquen. Es la forma en que tu app 'habla' con el servidor de la IA.",
+    "full": {
+      "es": "Application Programming Interface",
+      "en": "Application Programming Interface"
+    },
+    "desc": {
+      "es": "Un puente de software que permite que dos aplicaciones se comuniquen. Es la forma en que tu app 'habla' con el servidor de la IA.",
+      "en": "A software bridge that lets two applications communicate. It's how your app 'talks' to the AI's server."
+    },
     "category": "automatizacion",
     "icon": "ph-code",
     "color": "emerald"
   },
   {
     "term": "ReAct",
-    "full": "Reasoning and Acting",
-    "desc": "Ciclo de trabajo para Agentes donde la IA razona, actúa usando una herramienta, observa el resultado y vuelve a razonar, logrando resolver tareas con autonomía.",
+    "full": {
+      "es": "Reasoning and Acting",
+      "en": "Reasoning and Acting"
+    },
+    "desc": {
+      "es": "Ciclo de trabajo para Agentes donde la IA razona, actúa usando una herramienta, observa el resultado y vuelve a razonar, logrando resolver tareas con autonomía.",
+      "en": "A workflow cycle for agents where the AI reasons, acts using a tool, observes the result, and reasons again — solving tasks autonomously."
+    },
     "category": "automatizacion",
     "icon": "ph-arrows-clockwise",
     "color": "emerald"
   },
   {
     "term": "Prompt",
-    "full": "Instrucción",
-    "desc": "La instrucción, pregunta o texto inicial que le das a la IA para que genere una respuesta o realice una acción.",
+    "full": {
+      "es": "Instrucción",
+      "en": "Prompt"
+    },
+    "desc": {
+      "es": "La instrucción, pregunta o texto inicial que le das a la IA para que genere una respuesta o realice una acción.",
+      "en": "The instruction, question, or initial text you give the AI so it generates a response or performs an action."
+    },
     "category": "uso",
     "icon": "ph-terminal-window",
     "color": "amber"
   },
   {
     "term": "Prompt Eng.",
-    "full": "Ingeniería de Prompts",
-    "desc": "La habilidad (o arte) de diseñar y estructurar instrucciones de la manera más efectiva posible para obtener el mejor resultado exacto del modelo.",
+    "full": {
+      "es": "Ingeniería de Prompts",
+      "en": "Prompt Engineering"
+    },
+    "desc": {
+      "es": "La habilidad (o arte) de diseñar y estructurar instrucciones de la manera más efectiva posible para obtener el mejor resultado exacto del modelo.",
+      "en": "The skill (or art) of designing and structuring instructions as effectively as possible to get the best, most precise result from the model."
+    },
     "category": "uso",
     "icon": "ph-magic-wand",
     "color": "amber"
   },
   {
     "term": "Token",
-    "full": "Unidad de Procesamiento",
-    "desc": "Unidad básica de datos que lee una IA. Puede ser una palabra, una sílaba o carácter. (Aprox. 100 tokens = 75 palabras en español).",
+    "full": {
+      "es": "Unidad de Procesamiento",
+      "en": "Processing Unit (Token)"
+    },
+    "desc": {
+      "es": "Unidad básica de datos que lee una IA. Puede ser una palabra, una sílaba o carácter. (Aprox. 100 tokens = 75 palabras en español).",
+      "en": "The basic unit of data an AI reads. It can be a word, a syllable, or a character. (Roughly 100 tokens ≈ 75 words in English)."
+    },
     "category": "uso",
     "icon": "ph-puzzle-piece",
     "color": "amber"
   },
   {
     "term": "Context Window",
-    "full": "Ventana de Contexto",
-    "desc": "Cantidad máxima de información que la IA puede 'recordar' a la vez en una conversación. Si se supera, olvidará el inicio del texto.",
+    "full": {
+      "es": "Ventana de Contexto",
+      "en": "Context Window"
+    },
+    "desc": {
+      "es": "Cantidad máxima de información que la IA puede 'recordar' a la vez en una conversación. Si se supera, olvidará el inicio del texto.",
+      "en": "The maximum amount of information the AI can 'remember' at once during a conversation. If it's exceeded, it will forget the beginning of the text."
+    },
     "category": "uso",
     "icon": "ph-frame-corners",
     "color": "amber"
   },
   {
     "term": "Hallucination",
-    "full": "Alucinación",
-    "desc": "Cuando la IA genera una respuesta que suena convincente y segura, pero que es falsa o inventada. Ocurre porque predice la palabra que suena mejor.",
+    "full": {
+      "es": "Alucinación",
+      "en": "Hallucination"
+    },
+    "desc": {
+      "es": "Cuando la IA genera una respuesta que suena convincente y segura, pero que es falsa o inventada. Ocurre porque predice la palabra que suena mejor.",
+      "en": "When the AI generates a response that sounds convincing and confident but is false or made up. It happens because it predicts the word that sounds best."
+    },
     "category": "uso",
     "icon": "ph-warning-circle",
     "color": "amber"
   },
   {
     "term": "CoT",
-    "full": "Chain of Thought (Cadena de Pensamiento)",
-    "desc": "Técnica donde le pides a la IA que 'piense paso a paso', mostrando su lógica antes de responder. Reduce notablemente los errores en tareas complejas.",
+    "full": {
+      "es": "Chain of Thought (Cadena de Pensamiento)",
+      "en": "Chain of Thought"
+    },
+    "desc": {
+      "es": "Técnica donde le pides a la IA que 'piense paso a paso', mostrando su lógica antes de responder. Reduce notablemente los errores en tareas complejas.",
+      "en": "A technique where you ask the AI to 'think step by step,' showing its reasoning before answering. It significantly reduces errors on complex tasks."
+    },
     "category": "uso",
     "icon": "ph-list-numbers",
     "color": "amber"
   },
   {
     "term": "Zero/Few-shot",
-    "full": "Aprendizaje Zero-shot y Few-shot",
-    "desc": "Darle una tarea a la IA sin ejemplos previos (Zero) o con 2 o 3 ejemplos claros (Few) en el prompt para que replique un patrón o formato exacto.",
+    "full": {
+      "es": "Aprendizaje Zero-shot y Few-shot",
+      "en": "Zero-shot and Few-shot Learning"
+    },
+    "desc": {
+      "es": "Prueba en la que el modelo debe completar una tarea sin que se le hayan proporcionado los datos de entrenamiento requeridos (Zero), o dándole solo 2 o 3 ejemplos claros (Few) en el prompt para que replique el patrón.",
+      "en": "A test where the model must complete a task without having been given the required training data (zero-shot), or by giving it just 2-3 clear examples (few-shot) in the prompt so it replicates the pattern."
+    },
     "category": "uso",
     "icon": "ph-copy",
     "color": "amber"
   },
   {
     "term": "DSPy",
-    "full": "Framework DSPy",
-    "desc": "Marco de trabajo que permite 'programar' el comportamiento del modelo y delegarle al sistema que optimice matemáticamente los prompts de forma automática.",
+    "full": {
+      "es": "Framework DSPy",
+      "en": "DSPy Framework"
+    },
+    "desc": {
+      "es": "Marco de trabajo que permite 'programar' el comportamiento del modelo y delegarle al sistema que optimice matemáticamente los prompts de forma automática.",
+      "en": "A framework that lets you 'program' the model's behavior and delegate to the system the job of automatically and mathematically optimizing prompts."
+    },
     "category": "uso",
     "icon": "ph-braces",
     "color": "amber"
   },
   {
     "term": "RLHF",
-    "full": "Reinforcement Learning from Human Feedback",
-    "desc": "Técnica que entrena a la IA usando calificaciones humanas para que aprenda qué respuestas son útiles y seguras, dándole un tono conversacional.",
+    "full": {
+      "es": "Reinforcement Learning from Human Feedback",
+      "en": "Reinforcement Learning from Human Feedback"
+    },
+    "desc": {
+      "es": "Técnica que entrena a la IA usando calificaciones humanas para que aprenda qué respuestas son útiles y seguras, dándole un tono conversacional.",
+      "en": "A technique that trains AI using human ratings so it learns which responses are helpful and safe, giving it a conversational tone."
+    },
     "category": "optimizacion",
     "icon": "ph-thumbs-up",
     "color": "rose"
   },
   {
     "term": "DPO",
-    "full": "Direct Preference Optimization",
-    "desc": "Técnica moderna y ligera que logra el mismo objetivo que RLHF (alinear la IA con humanos) pero con matemáticas más simples y menos costo de cómputo.",
+    "full": {
+      "es": "Direct Preference Optimization",
+      "en": "Direct Preference Optimization"
+    },
+    "desc": {
+      "es": "Técnica moderna y ligera que logra el mismo objetivo que RLHF (alinear la IA con humanos) pero con matemáticas más simples y menos costo de cómputo.",
+      "en": "A modern, lightweight technique that achieves the same goal as RLHF (aligning AI with humans) but with simpler math and lower compute cost."
+    },
     "category": "optimizacion",
     "icon": "ph-target",
     "color": "rose"
   },
   {
     "term": "LoRA",
-    "full": "Low-Rank Adaptation",
-    "desc": "Técnica de ajuste fino donde solo se entrena una pequeña capa adicional sobre el modelo original, permitiendo personalizar una IA rápida y económicamente.",
+    "full": {
+      "es": "Low-Rank Adaptation",
+      "en": "Low-Rank Adaptation"
+    },
+    "desc": {
+      "es": "Técnica de ajuste fino donde solo se entrena una pequeña capa adicional sobre el modelo original, permitiendo personalizar una IA rápida y económicamente.",
+      "en": "A fine-tuning technique where only a small additional layer is trained on top of the original model, allowing an AI to be customized quickly and cheaply."
+    },
     "category": "optimizacion",
     "icon": "ph-stack",
     "color": "rose"
   },
   {
     "term": "QLoRA",
-    "full": "Quantized LoRA",
-    "desc": "Evolución de LoRA que comprime los datos, permitiendo entrenar modelos masivos en tarjetas gráficas (GPUs) de computadoras de consumo normales.",
+    "full": {
+      "es": "Quantized LoRA",
+      "en": "Quantized LoRA"
+    },
+    "desc": {
+      "es": "Evolución de LoRA que comprime los datos, permitiendo entrenar modelos masivos en tarjetas gráficas (GPUs) de computadoras de consumo normales.",
+      "en": "An evolution of LoRA that compresses the data, allowing massive models to be trained on regular consumer-grade graphics cards (GPUs)."
+    },
     "category": "optimizacion",
     "icon": "ph-arrows-in",
     "color": "rose"
   },
   {
     "term": "Quantization",
-    "full": "Cuantización",
-    "desc": "Compresión de un modelo de IA reduciendo la precisión de sus números. Lo hace más ligero y rápido, perdiendo solo una fracción mínima de su 'inteligencia'.",
+    "full": {
+      "es": "Cuantización",
+      "en": "Quantization"
+    },
+    "desc": {
+      "es": "Compresión de un modelo de IA reduciendo la precisión de sus números. Lo hace más ligero y rápido, perdiendo solo una fracción mínima de su 'inteligencia'.",
+      "en": "Compression of an AI model by reducing the precision of its numbers. It makes the model lighter and faster while losing only a tiny fraction of its 'intelligence.'"
+    },
     "category": "optimizacion",
     "icon": "ph-file-zip",
     "color": "rose"
   },
   {
     "term": "MLOps",
-    "full": "Machine Learning Operations",
-    "desc": "Conjunto de prácticas y herramientas (similares a DevOps) para llevar un modelo desde la computadora del programador hasta un servidor en producción de forma escalable.",
+    "full": {
+      "es": "Machine Learning Operations",
+      "en": "Machine Learning Operations"
+    },
+    "desc": {
+      "es": "Conjunto de prácticas y herramientas (similares a DevOps) para llevar un modelo desde la computadora del programador hasta un servidor en producción de forma escalable.",
+      "en": "A set of practices and tools (similar to DevOps) for taking a model from a developer's computer to a production server in a scalable way."
+    },
     "category": "operaciones",
     "icon": "ph-hard-drives",
     "color": "cyan"
   },
   {
     "term": "KV Cache",
-    "full": "Key-Value Cache",
-    "desc": "Memoria a corto plazo que usan los LLMs para no recalcular palabras anteriores al generar texto nuevo. Su optimización es clave para que la IA responda rápido.",
+    "full": {
+      "es": "Key-Value Cache",
+      "en": "Key-Value Cache"
+    },
+    "desc": {
+      "es": "Memoria a corto plazo que usan los LLMs para no recalcular palabras anteriores al generar texto nuevo. Su optimización es clave para que la IA responda rápido.",
+      "en": "Short-term memory used by LLMs to avoid recalculating previous words while generating new text. Optimizing it is key for the AI to respond quickly."
+    },
     "category": "operaciones",
     "icon": "ph-clock-counter-clockwise",
     "color": "cyan"
   },
   {
     "term": "Hugging Face",
-    "full": "Hugging Face Hub",
-    "desc": "Conocido como el 'GitHub de la IA'. Es la plataforma donde la comunidad y las grandes empresas comparten modelos de IA Open Source, datasets y herramientas.",
+    "full": {
+      "es": "Hugging Face Hub",
+      "en": "Hugging Face Hub"
+    },
+    "desc": {
+      "es": "Conocido como el 'GitHub de la IA'. Es la plataforma donde la comunidad y las grandes empresas comparten modelos de IA Open Source, datasets y herramientas.",
+      "en": "Known as 'the GitHub of AI.' It's the platform where the community and large companies share open-source AI models, datasets, and tools."
+    },
     "category": "operaciones",
     "icon": "ph-smiley",
     "color": "cyan"
+  },
+  {
+    "term": "Narrow AI",
+    "full": {
+      "es": "Inteligencia Artificial Estrecha",
+      "en": "Narrow Artificial Intelligence"
+    },
+    "desc": {
+      "es": "Sistemas de inteligencia artificial diseñados para realizar una tarea específica o una gama limitada de tareas con alta eficiencia y precisión. Es incapaz de aprender más allá de su conjunto de habilidades.",
+      "en": "AI systems designed to perform a specific task or a limited range of tasks with high efficiency and precision. Unable to learn beyond its set of skills."
+    },
+    "category": "fundamentales",
+    "icon": "ph-arrows-in-line-horizontal",
+    "color": "indigo"
+  },
+  {
+    "term": "Alignment",
+    "full": {
+      "es": "Alineación de IA",
+      "en": "AI Alignment"
+    },
+    "desc": {
+      "es": "La tarea de asegurar que los objetivos de un sistema de inteligencia artificial estén en sintonía con los valores humanos.",
+      "en": "The task of ensuring that an AI system's goals are in sync with human values."
+    },
+    "category": "optimizacion",
+    "icon": "ph-check-circle",
+    "color": "rose"
+  },
+  {
+    "term": "Attention",
+    "full": {
+      "es": "Mecanismo de Atención",
+      "en": "Attention Mechanism"
+    },
+    "desc": {
+      "es": "En el contexto de las redes neuronales, los mecanismos de atención ayudan al modelo a enfocarse en las partes relevantes de la entrada al momento de producir una salida.",
+      "en": "In neural networks, attention mechanisms help the model focus on the relevant parts of the input when producing an output."
+    },
+    "category": "arquitectura",
+    "icon": "ph-eye",
+    "color": "fuchsia"
+  },
+  {
+    "term": "CNN",
+    "full": {
+      "es": "Convolutional Neural Network",
+      "en": "Convolutional Neural Network"
+    },
+    "desc": {
+      "es": "Un subcampo del aprendizaje automático centrado en el entrenamiento de redes neuronales con muchas capas, lo que permite el aprendizaje de patrones complejos en los datos.",
+      "en": "A machine learning subfield focused on training neural networks with many layers, enabling the learning of complex patterns in data (especially images)."
+    },
+    "category": "arquitectura",
+    "icon": "ph-image",
+    "color": "fuchsia"
+  },
+  {
+    "term": "XAI",
+    "full": {
+      "es": "Explainable AI (IA Explicable)",
+      "en": "Explainable AI"
+    },
+    "desc": {
+      "es": "Un subcampo de la IA enfocado en la creación de modelos transparentes que proporcionen explicaciones claras y comprensibles sobre cómo toman sus decisiones.",
+      "en": "An AI subfield focused on building transparent models that provide clear, understandable explanations of how they make their decisions."
+    },
+    "category": "fundamentales",
+    "icon": "ph-magnifying-glass",
+    "color": "indigo"
+  },
+  {
+    "term": "Latent Space",
+    "full": {
+      "es": "Espacio Latente",
+      "en": "Latent Space"
+    },
+    "desc": {
+      "es": "Se refiere a la representación comprimida de los datos que crea un modelo (como una red neuronal), donde los puntos de datos similares están más cerca en el espacio latente.",
+      "en": "The compressed representation of data that a model (like a neural network) creates, where similar data points sit closer together within that space."
+    },
+    "category": "arquitectura",
+    "icon": "ph-dots-three-circle",
+    "color": "fuchsia"
+  },
+  {
+    "term": "NLP",
+    "full": {
+      "es": "Natural Language Processing",
+      "en": "Natural Language Processing"
+    },
+    "desc": {
+      "es": "Subcampo de la IA centrado en la interacción entre computadoras y humanos mediante lenguaje natural; su objetivo final es leer, descifrar, entender y dar sentido al lenguaje humano.",
+      "en": "An AI subfield focused on the interaction between computers and humans through natural language; its ultimate goal is to read, decipher, understand, and make sense of human language."
+    },
+    "category": "fundamentales",
+    "icon": "ph-chat-circle-text",
+    "color": "indigo"
+  },
+  {
+    "term": "Bayesian Net",
+    "full": {
+      "es": "Redes Bayesianas",
+      "en": "Bayesian Networks"
+    },
+    "desc": {
+      "es": "Modelos gráficos probabilísticos que representan un conjunto de variables y sus dependencias condicionales usando teoría de probabilidad y de grafos para manejar incertidumbres.",
+      "en": "Probabilistic graphical models that represent a set of variables and their conditional dependencies, using probability and graph theory to handle uncertainty."
+    },
+    "category": "arquitectura",
+    "icon": "ph-graph",
+    "color": "fuchsia"
+  },
+  {
+    "term": "HAI",
+    "full": {
+      "es": "Human-Centered Artificial Intelligence",
+      "en": "Human-Centered Artificial Intelligence"
+    },
+    "desc": {
+      "es": "Un enfoque de la IA que prioriza las necesidades, valores y el bienestar de los humanos a lo largo de todo el desarrollo y la implementación de estos sistemas.",
+      "en": "An approach to AI that prioritizes human needs, values, and well-being throughout the entire development and deployment of these systems."
+    },
+    "category": "fundamentales",
+    "icon": "ph-users",
+    "color": "indigo"
+  },
+  {
+    "term": "Ethical AI",
+    "full": {
+      "es": "IA Ética",
+      "en": "Ethical AI"
+    },
+    "desc": {
+      "es": "El diseño, desarrollo y despliegue de sistemas de IA que se alinean con los valores humanos y abordan inquietudes como los sesgos algorítmicos o la protección de privacidad.",
+      "en": "The design, development, and deployment of AI systems aligned with human values, addressing concerns such as algorithmic bias or privacy protection."
+    },
+    "category": "fundamentales",
+    "icon": "ph-scales",
+    "color": "indigo"
+  },
+  {
+    "term": "Traditional AI",
+    "full": {
+      "es": "IA Tradicional",
+      "en": "Traditional AI"
+    },
+    "desc": {
+      "es": "Enfoques anteriores a la inteligencia artificial moderna que dependían de reglas explícitamente programadas, lógica y conocimiento definido por humanos en lugar de aprender de los datos.",
+      "en": "Approaches that predate modern artificial intelligence, relying on explicitly programmed rules, logic, and human-defined knowledge instead of learning from data."
+    },
+    "category": "fundamentales",
+    "icon": "ph-tree-structure",
+    "color": "indigo"
+  },
+  {
+    "term": "Knowledge-Driven AI",
+    "full": {
+      "es": "IA Impulsada por Conocimiento",
+      "en": "Knowledge-Driven AI"
+    },
+    "desc": {
+      "es": "Sistemas de IA que aprovechan el conocimiento estructurado y explícito para realizar razonamientos lógicos, siendo vitales para aplicaciones que exigen gran transparencia.",
+      "en": "AI systems that leverage structured, explicit knowledge to perform logical reasoning, vital for applications that demand high transparency."
+    },
+    "category": "arquitectura",
+    "icon": "ph-book-open",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Data-Driven AI",
+    "full": {
+      "es": "IA Impulsada por Datos",
+      "en": "Data-Driven AI"
+    },
+    "desc": {
+      "es": "Utiliza datos a gran escala y técnicas estadísticas para descubrir patrones y hacer predicciones de forma automática sin depender de reglas predefinidas.",
+      "en": "Uses large-scale data and statistical techniques to discover patterns and make predictions automatically, without relying on predefined rules."
+    },
+    "category": "arquitectura",
+    "icon": "ph-database",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Accelerator",
+    "full": {
+      "es": "Acelerador (Hardware)",
+      "en": "Hardware Accelerator"
+    },
+    "desc": {
+      "es": "Una clase de microprocesador diseñado para acelerar de forma directa las aplicaciones de inteligencia artificial.",
+      "en": "A class of microprocessor designed to directly speed up artificial intelligence workloads."
+    },
+    "category": "operaciones",
+    "icon": "ph-cpu",
+    "color": "cyan"
+  },
+  {
+    "term": "Loss Function",
+    "full": {
+      "es": "Función de Pérdida",
+      "en": "Loss Function"
+    },
+    "desc": {
+      "es": "Una función matemática que un modelo de aprendizaje automático busca minimizar de forma continua durante su entrenamiento.",
+      "en": "A mathematical function that a machine learning model continuously tries to minimize during its training."
+    },
+    "category": "optimizacion",
+    "icon": "ph-chart-line-down",
+    "color": "rose"
+  },
+  {
+    "term": "ASI",
+    "full": {
+      "es": "Artificial Superintelligence",
+      "en": "Artificial Superintelligence"
+    },
+    "desc": {
+      "es": "Nivel hipotético de inteligencia artificial que supera con creces la capacidad intelectual, creativa y cognitiva de la mente humana en todos los campos.",
+      "en": "A hypothetical level of artificial intelligence that vastly exceeds the intellectual, creative, and cognitive capacity of the human mind in every field."
+    },
+    "category": "fundamentales",
+    "icon": "ph-planet",
+    "color": "indigo"
+  },
+  {
+    "term": "Backpropagation",
+    "full": {
+      "es": "Retropropagación",
+      "en": "Backpropagation"
+    },
+    "desc": {
+      "es": "Algoritmo fundamental para entrenar redes neuronales que calcula el gradiente del error ajustando los pesos de las capas desde la salida hacia la entrada.",
+      "en": "A fundamental algorithm for training neural networks that calculates the error gradient by adjusting layer weights from the output back to the input."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-clockwise",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Bias",
+    "full": {
+      "es": "Sesgo Algorítmico",
+      "en": "Algorithmic Bias"
+    },
+    "desc": {
+      "es": "Desviaciones o prejuicios en los resultados de un modelo provocados por asimetrías en los datos de entrenamiento o en el diseño del sistema.",
+      "en": "Deviations or prejudices in a model's outputs caused by imbalances in the training data or in the system's design."
+    },
+    "category": "fundamentales",
+    "icon": "ph-scales",
+    "color": "indigo"
+  },
+  {
+    "term": "Data Augmentation",
+    "full": {
+      "es": "Aumento de Datos",
+      "en": "Data Augmentation"
+    },
+    "desc": {
+      "es": "Técnica para expandir el tamaño y diversidad del conjunto de entrenamiento creando copias ligeramente modificadas de los datos existentes.",
+      "en": "A technique for expanding the size and diversity of the training set by creating slightly modified copies of existing data."
+    },
+    "category": "arquitectura",
+    "icon": "ph-copy",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Diffusion Model",
+    "full": {
+      "es": "Modelo de Difusión",
+      "en": "Diffusion Model"
+    },
+    "desc": {
+      "es": "Arquitectura generativa que crea imágenes o audio añadiendo ruido aleatorio a los datos y luego aprendiendo el proceso inverso para eliminarlo.",
+      "en": "A generative architecture that creates images or audio by adding random noise to data and then learning the reverse process to remove it."
+    },
+    "category": "arquitectura",
+    "icon": "ph-sparkles",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Double Descent",
+    "full": {
+      "es": "Doble Descenso",
+      "en": "Double Descent"
+    },
+    "desc": {
+      "es": "Fenómeno en aprendizaje automático donde el rendimiento del modelo empeora al aumentar la complejidad, pero luego vuelve a mejorar drásticamente.",
+      "en": "A phenomenon in machine learning where model performance worsens as complexity increases, but then improves dramatically again."
+    },
+    "category": "optimizacion",
+    "icon": "ph-chart-line-down",
+    "color": "rose"
+  },
+  {
+    "term": "E2E Learning",
+    "full": {
+      "es": "End-to-End Learning (Aprendizaje Extremo a Extremo)",
+      "en": "End-to-End Learning"
+    },
+    "desc": {
+      "es": "Enfoque donde el modelo aprende a resolver una tarea compleja desde los datos crudos hasta la respuesta final sin módulos ni procesamiento manual intermedio.",
+      "en": "An approach where the model learns to solve a complex task from raw data to the final answer without intermediate manual modules or processing."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-out-line-horizontal",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Expert Systems",
+    "full": {
+      "es": "Sistemas Expertos",
+      "en": "Expert Systems"
+    },
+    "desc": {
+      "es": "Programas de IA simbólica que simulan la capacidad de decisión de un experto humano mediante motores de inferencia y bases de conocimiento basadas en reglas.",
+      "en": "Symbolic AI programs that simulate a human expert's decision-making ability through inference engines and rule-based knowledge bases."
+    },
+    "category": "fundamentales",
+    "icon": "ph-tree-structure",
+    "color": "indigo"
+  },
+  {
+    "term": "Forward Prop.",
+    "full": {
+      "es": "Propagación Hacia Adelante",
+      "en": "Forward Propagation"
+    },
+    "desc": {
+      "es": "Proceso mediante el cual la información de entrada atraviesa secuencialmente las capas de una red neuronal para generar una predicción final.",
+      "en": "The process by which input information sequentially passes through a neural network's layers to generate a final prediction."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrow-right",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Foundation Model",
+    "full": {
+      "es": "Modelo Fundacional / Base",
+      "en": "Foundation Model"
+    },
+    "desc": {
+      "es": "Modelos masivos entrenados en grandes volúmenes de datos diversos que sirven como base flexible para ser adaptados a múltiples aplicaciones especializadas.",
+      "en": "Massive models trained on huge, diverse volumes of data that serve as a flexible base to be adapted to multiple specialized applications."
+    },
+    "category": "fundamentales",
+    "icon": "ph-stack",
+    "color": "indigo"
+  },
+  {
+    "term": "GPU",
+    "full": {
+      "es": "Graphics Processing Unit",
+      "en": "Graphics Processing Unit"
+    },
+    "desc": {
+      "es": "Procesador con miles de núcleos diseñado para realizar cálculos paralelos masivos, indispensable para acelerar el entrenamiento e inferencia de modelos de IA.",
+      "en": "A processor with thousands of cores designed for massive parallel computation, indispensable for accelerating AI model training and inference."
+    },
+    "category": "operaciones",
+    "icon": "ph-cpu",
+    "color": "cyan"
+  },
+  {
+    "term": "TPU",
+    "full": {
+      "es": "Tensor Processing Unit",
+      "en": "Tensor Processing Unit"
+    },
+    "desc": {
+      "es": "Chip acelerador propietario desarrollado por Google diseñado específicamente para optimizar operaciones matemáticas matriciales de redes neuronales.",
+      "en": "A proprietary accelerator chip developed by Google, designed specifically to optimize neural network matrix math operations."
+    },
+    "category": "operaciones",
+    "icon": "ph-cpu",
+    "color": "cyan"
+  },
+  {
+    "term": "Gradient Descent",
+    "full": {
+      "es": "Descenso de Gradiente",
+      "en": "Gradient Descent"
+    },
+    "desc": {
+      "es": "Método de optimización iterativo que ajusta los parámetros del modelo en la dirección de mayor descenso de la función de pérdida para minimizar errores.",
+      "en": "An iterative optimization method that adjusts a model's parameters in the direction of steepest decrease of the loss function to minimize errors."
+    },
+    "category": "optimizacion",
+    "icon": "ph-chart-line-down",
+    "color": "rose"
+  },
+  {
+    "term": "Hidden Layer",
+    "full": {
+      "es": "Capa Oculta",
+      "en": "Hidden Layer"
+    },
+    "desc": {
+      "es": "Capas intermedias de neuronas artificiales ubicadas entre la entrada y la salida que se encargan de extraer y combinar patrones de datos abstractos.",
+      "en": "Intermediate layers of artificial neurons located between the input and output that extract and combine abstract data patterns."
+    },
+    "category": "arquitectura",
+    "icon": "ph-layers",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Hyperparameter",
+    "full": {
+      "es": "Hiperparámetro",
+      "en": "Hyperparameter"
+    },
+    "desc": {
+      "es": "Variables estructurales configuradas por el desarrollador antes de iniciar el entrenamiento (como la tasa de aprendizaje) para controlar cómo aprende el modelo.",
+      "en": "Structural variables set by the developer before training begins (like the learning rate) to control how the model learns."
+    },
+    "category": "optimizacion",
+    "icon": "ph-sliders",
+    "color": "rose"
+  },
+  {
+    "term": "Inference",
+    "full": {
+      "es": "Inferencia",
+      "en": "Inference"
+    },
+    "desc": {
+      "es": "Fase operativa donde un modelo de IA ya entrenado procesa datos reales de entrada para generar predicciones o contenidos en tiempo real.",
+      "en": "The operational phase where an already-trained AI model processes real input data to generate predictions or content in real time."
+    },
+    "category": "operaciones",
+    "icon": "ph-play-circle",
+    "color": "cyan"
+  },
+  {
+    "term": "Instruction Tuning",
+    "full": {
+      "es": "Ajuste por Instrucciones",
+      "en": "Instruction Tuning"
+    },
+    "desc": {
+      "es": "Técnica de fine-tuning donde el modelo se entrena con pares de instrucción-respuesta para responder de forma útil y conversacional a peticiones en lenguaje natural.",
+      "en": "A fine-tuning technique where the model is trained on instruction-response pairs so it responds helpfully and conversationally to natural language requests."
+    },
+    "category": "optimizacion",
+    "icon": "ph-list-checks",
+    "color": "rose"
+  },
+  {
+    "term": "NeRF",
+    "full": {
+      "es": "Neural Radiance Fields",
+      "en": "Neural Radiance Fields"
+    },
+    "desc": {
+      "es": "Técnica de renderizado basada en redes neuronales que reconstruye escenas e imágenes fotorrealistas en 3D a partir de un conjunto limitado de fotografías 2D.",
+      "en": "A neural-network-based rendering technique that reconstructs photorealistic 3D scenes and images from a limited set of 2D photographs."
+    },
+    "category": "arquitectura",
+    "icon": "ph-cube-transparent",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Neural Network",
+    "full": {
+      "es": "Red Neuronal Artificial",
+      "en": "Artificial Neural Network"
+    },
+    "desc": {
+      "es": "Modelo matemático compuesto por nodos interconectados organizados en capas que procesa datos imitando la estructura biológica del cerebro humano.",
+      "en": "A mathematical model made up of interconnected nodes organized in layers that processes data by mimicking the biological structure of the human brain."
+    },
+    "category": "arquitectura",
+    "icon": "ph-network",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Overfitting",
+    "full": {
+      "es": "Sobreajuste",
+      "en": "Overfitting"
+    },
+    "desc": {
+      "es": "Falla de aprendizaje donde el modelo memoriza excesivamente el ruido de los datos de entrenamiento y pierde la capacidad de generalizar con información nueva.",
+      "en": "A learning failure where the model excessively memorizes noise in the training data and loses the ability to generalize to new information."
+    },
+    "category": "optimizacion",
+    "icon": "ph-warning",
+    "color": "rose"
+  },
+  {
+    "term": "Underfitting",
+    "full": {
+      "es": "Subajuste",
+      "en": "Underfitting"
+    },
+    "desc": {
+      "es": "Situación donde la arquitectura del modelo es demasiado simple para aprender la estructura subyacente de los datos, produciendo predicciones imprecisas.",
+      "en": "A situation where the model's architecture is too simple to learn the underlying structure of the data, producing inaccurate predictions."
+    },
+    "category": "optimizacion",
+    "icon": "ph-warning-octagon",
+    "color": "rose"
+  },
+  {
+    "term": "Pre-training",
+    "full": {
+      "es": "Preentrenamiento",
+      "en": "Pre-training"
+    },
+    "desc": {
+      "es": "Fase masiva inicial no supervisada donde el modelo aprende representaciones lingüísticas y patrones generales antes de ser especializado en una tarea concreta.",
+      "en": "The initial, massive, unsupervised phase where the model learns general linguistic representations and patterns before being specialized for a specific task."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-clockwise",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Regularization",
+    "full": {
+      "es": "Regularización",
+      "en": "Regularization"
+    },
+    "desc": {
+      "es": "Técnicas matemáticas aplicadas a la función de costo para penalizar la complejidad excesiva del modelo y prevenir el sobreajuste.",
+      "en": "Mathematical techniques applied to the cost function to penalize excessive model complexity and prevent overfitting."
+    },
+    "category": "optimizacion",
+    "icon": "ph-shield-check",
+    "color": "rose"
+  },
+  {
+    "term": "RL",
+    "full": {
+      "es": "Reinforcement Learning (Aprendizaje por Refuerzo)",
+      "en": "Reinforcement Learning"
+    },
+    "desc": {
+      "es": "Paradigma donde un agente inteligente aprende a tomar decisiones óptimas ejecutando acciones en un entorno dinámico para maximizar una recompensa acumulada.",
+      "en": "A paradigm where an intelligent agent learns to make optimal decisions by taking actions in a dynamic environment to maximize a cumulative reward."
+    },
+    "category": "fundamentales",
+    "icon": "ph-trophy",
+    "color": "indigo"
+  },
+  {
+    "term": "Supervised ML",
+    "full": {
+      "es": "Aprendizaje Supervisado",
+      "en": "Supervised Learning"
+    },
+    "desc": {
+      "es": "Método de entrenamiento donde el algoritmo aprende la relación entre datos de entrada y sus correspondientes respuestas correctas etiquetadas previamente.",
+      "en": "A training method where the algorithm learns the relationship between input data and its correct, previously labeled outputs."
+    },
+    "category": "fundamentales",
+    "icon": "ph-check-square",
+    "color": "indigo"
+  },
+  {
+    "term": "Unsupervised ML",
+    "full": {
+      "es": "Aprendizaje No Supervisado",
+      "en": "Unsupervised Learning"
+    },
+    "desc": {
+      "es": "Enfoque donde la IA analiza conjuntos de datos sin etiquetas para descubrir de forma autónoma patrones ocultos, agrupaciones o estructuras subyacentes.",
+      "en": "An approach where the AI analyzes unlabeled datasets to autonomously discover hidden patterns, clusters, or underlying structures."
+    },
+    "category": "fundamentales",
+    "icon": "ph-magnifying-glass",
+    "color": "indigo"
+  },
+  {
+    "term": "Symbolic AI",
+    "full": {
+      "es": "IA Simbólica",
+      "en": "Symbolic AI"
+    },
+    "desc": {
+      "es": "Enfoque clásico de IA centrado en la representación del conocimiento mediante símbolos abstractos y reglas de lógica formal explícitas.",
+      "en": "A classic AI approach centered on representing knowledge through abstract symbols and explicit formal logic rules."
+    },
+    "category": "fundamentales",
+    "icon": "ph-brackets-angle",
+    "color": "indigo"
+  },
+  {
+    "term": "Transfer Learning",
+    "full": {
+      "es": "Aprendizaje por Transferencia",
+      "en": "Transfer Learning"
+    },
+    "desc": {
+      "es": "Estrategia que aprovecha el conocimiento previamente adquirido por un modelo en una tarea previa para acelerar el aprendizaje de una nueva tarea relacionada.",
+      "en": "A strategy that leverages knowledge a model previously acquired on one task to speed up learning on a new, related task."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrow-fat-right",
+    "color": "fuchsia"
+  },
+  {
+    "term": "AI Benchmarks",
+    "full": {
+      "es": "Evaluaciones Comparativas de IA",
+      "en": "AI Benchmarks"
+    },
+    "desc": {
+      "es": "Pruebas estandarizadas y conjuntos de datos utilizados para medir y comparar con precisión el rendimiento de distintos modelos en tareas específicas.",
+      "en": "Standardized tests and datasets used to accurately measure and compare the performance of different models on specific tasks."
+    },
+    "category": "operaciones",
+    "icon": "ph-chart-bar",
+    "color": "cyan"
+  },
+  {
+    "term": "AI Fluency",
+    "full": {
+      "es": "Fluidez en IA",
+      "en": "AI Fluency"
+    },
+    "desc": {
+      "es": "Conjunto de competencias teóricas y prácticas que permiten a las personas interactuar, evaluar y colaborar eficazmente con sistemas de inteligencia artificial.",
+      "en": "A set of theoretical and practical competencies that allow people to effectively interact with, evaluate, and collaborate with AI systems."
+    },
+    "category": "fundamentales",
+    "icon": "ph-student",
+    "color": "indigo"
+  },
+  {
+    "term": "AI Safety",
+    "full": {
+      "es": "Seguridad en IA",
+      "en": "AI Safety"
+    },
+    "desc": {
+      "es": "Disciplina enfocada en la investigación de métodos para prevenir riesgos, sesgos indeseados o comportamientos peligrosos en modelos de IA avanzados.",
+      "en": "A discipline focused on researching methods to prevent risks, unwanted biases, or dangerous behaviors in advanced AI models."
+    },
+    "category": "fundamentales",
+    "icon": "ph-shield",
+    "color": "indigo"
+  },
+  {
+    "term": "AI Workflow",
+    "full": {
+      "es": "Flujo de Trabajo de IA",
+      "en": "AI Workflow"
+    },
+    "desc": {
+      "es": "Secuencia técnica ordenada de etapas que abarca desde la recolección y limpieza de datos hasta el entrenamiento, evaluación, despliegue y monitoreo.",
+      "en": "An ordered technical sequence of stages spanning from data collection and cleaning to training, evaluation, deployment, and monitoring."
+    },
+    "category": "operaciones",
+    "icon": "ph-tree-structure",
+    "color": "cyan"
+  },
+  {
+    "term": "Big Data",
+    "full": {
+      "es": "Grandes Volúmenes de Datos",
+      "en": "Big Data"
+    },
+    "desc": {
+      "es": "Conjuntos masivos de información caracterizados por su volumen, velocidad y variedad, que alimentan los algoritmos modernos de aprendizaje profundo.",
+      "en": "Massive datasets characterized by their volume, velocity, and variety, which fuel modern deep learning algorithms."
+    },
+    "category": "fundamentales",
+    "icon": "ph-database",
+    "color": "indigo"
+  },
+  {
+    "term": "Closed Source",
+    "full": {
+      "es": "Código Propietario / Cerrado",
+      "en": "Closed / Proprietary Source"
+    },
+    "desc": {
+      "es": "Modelos o software cuya arquitectura interna y pesos de red se mantienen confidenciales y son accesibles únicamente vía API comercial.",
+      "en": "Models or software whose internal architecture and network weights remain confidential and are accessible only through a commercial API."
+    },
+    "category": "operaciones",
+    "icon": "ph-lock",
+    "color": "cyan"
+  },
+  {
+    "term": "Open Source",
+    "full": {
+      "es": "Código Abierto",
+      "en": "Open Source"
+    },
+    "desc": {
+      "es": "Software y plataformas de IA cuyo código de desarrollo es público, permitiendo a la comunidad global auditarlo, modificarlo y redistribuirlo libremente.",
+      "en": "AI software and platforms whose development code is public, allowing the global community to audit, modify, and redistribute it freely."
+    },
+    "category": "operaciones",
+    "icon": "ph-code-block",
+    "color": "cyan"
+  },
+  {
+    "term": "Open-Weight",
+    "full": {
+      "es": "Modelo de Pesos Abiertos",
+      "en": "Open-Weight Model"
+    },
+    "desc": {
+      "es": "Modelos de IA cuyos parámetros entrenados (pesos) están disponibles para descarga pública, permitiendo su ejecución local o personalización total.",
+      "en": "AI models whose trained parameters (weights) are available for public download, allowing local execution or full customization."
+    },
+    "category": "operaciones",
+    "icon": "ph-download-simple",
+    "color": "cyan"
+  },
+  {
+    "term": "Computer Vision",
+    "full": {
+      "es": "Visión por Computadora",
+      "en": "Computer Vision"
+    },
+    "desc": {
+      "es": "Disciplina de la IA dedicada a procesar, analizar y comprender contenido visual del mundo real como imágenes médicas, fotografías o transmisiones de video.",
+      "en": "An AI discipline dedicated to processing, analyzing, and understanding real-world visual content such as medical images, photos, or video feeds."
+    },
+    "category": "fundamentales",
+    "icon": "ph-eye",
+    "color": "indigo"
+  },
+  {
+    "term": "Contrastive ML",
+    "full": {
+      "es": "Aprendizaje Contrastivo",
+      "en": "Contrastive Learning"
+    },
+    "desc": {
+      "es": "Técnica donde el modelo aprende representaciones asociando ejemplos similares y alejando ejemplos disímiles dentro de un espacio vectorial.",
+      "en": "A technique where the model learns representations by pulling similar examples together and pushing dissimilar examples apart within a vector space."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-left-right",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Decision Tree",
+    "full": {
+      "es": "Árbol de Decisión",
+      "en": "Decision Tree"
+    },
+    "desc": {
+      "es": "Algoritmo supervisado en forma de diagrama de flujo que divide consecutivamente los datos según reglas lógicas de decisión para clasificar o predecir resultados.",
+      "en": "A supervised, flowchart-like algorithm that repeatedly splits data according to logical decision rules to classify or predict outcomes."
+    },
+    "category": "fundamentales",
+    "icon": "ph-tree-structure",
+    "color": "indigo"
+  },
+  {
+    "term": "Dim. Reduction",
+    "full": {
+      "es": "Reducción de Dimensionalidad",
+      "en": "Dimensionality Reduction"
+    },
+    "desc": {
+      "es": "Proceso de simplificación de datos reduciendo la cantidad de variables aleatorias consideradas sin perder la estructura lógica esencial.",
+      "en": "A data simplification process that reduces the number of random variables considered without losing the essential underlying structure."
+    },
+    "category": "optimizacion",
+    "icon": "ph-arrows-in",
+    "color": "rose"
+  },
+  {
+    "term": "Ensemble ML",
+    "full": {
+      "es": "Métodos de Ensamble",
+      "en": "Ensemble Methods"
+    },
+    "desc": {
+      "es": "Técnica que combina las predicciones de múltiples modelos individuales para producir una respuesta global más precisa y resistente a errores.",
+      "en": "A technique that combines the predictions of multiple individual models to produce a more accurate, error-resistant overall answer."
+    },
+    "category": "arquitectura",
+    "icon": "ph-squares-four",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Federated ML",
+    "full": {
+      "es": "Aprendizaje Federado",
+      "en": "Federated Learning"
+    },
+    "desc": {
+      "es": "Estrategia donde múltiples dispositivos entrenan colaborativamente un modelo centralizado manteniendo sus datos locales en privado sin enviarlos al servidor.",
+      "en": "A strategy where multiple devices collaboratively train a centralized model while keeping their data private and local, without sending it to the server."
+    },
+    "category": "operaciones",
+    "icon": "ph-share-network",
+    "color": "cyan"
+  },
+  {
+    "term": "HITL",
+    "full": {
+      "es": "Human-in-the-Loop (Humano en el Bucle)",
+      "en": "Human-in-the-Loop"
+    },
+    "desc": {
+      "es": "Diseño operativo de IA que exige intervención o validación humana periódica en la toma de decisiones críticas para corregir o validar resultados.",
+      "en": "An operational AI design that requires periodic human intervention or validation in critical decision-making to correct or confirm results."
+    },
+    "category": "automatizacion",
+    "icon": "ph-user-check",
+    "color": "emerald"
+  },
+  {
+    "term": "k-NN",
+    "full": {
+      "es": "k-Nearest Neighbors",
+      "en": "k-Nearest Neighbors"
+    },
+    "desc": {
+      "es": "Algoritmo no paramétrico sencillo que clasifica un nuevo punto según la categoría mayoritaria entre sus 'k' datos de entrenamiento más cercanos.",
+      "en": "A simple non-parametric algorithm that classifies a new point based on the majority category among its 'k' closest training data points."
+    },
+    "category": "arquitectura",
+    "icon": "ph-dots-nine",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Knowledge Graph",
+    "full": {
+      "es": "Grafo de Conocimiento",
+      "en": "Knowledge Graph"
+    },
+    "desc": {
+      "es": "Red semántica de nodos y aristas que organiza conceptos y entidades del mundo real mostrando explícitamente cómo se relacionan entre sí.",
+      "en": "A semantic network of nodes and edges that organizes real-world concepts and entities, explicitly showing how they relate to one another."
+    },
+    "category": "arquitectura",
+    "icon": "ph-graph",
+    "color": "fuchsia"
+  },
+  {
+    "term": "LLMOps",
+    "full": {
+      "es": "Operaciones de Grandes Modelos de Lenguaje",
+      "en": "Large Language Model Operations"
+    },
+    "desc": {
+      "es": "Extensión especializada de MLOps orientada al despliegue, gestión de la memoria, evaluación continua y optimización de costos de modelos de lenguaje.",
+      "en": "A specialized extension of MLOps focused on the deployment, memory management, continuous evaluation, and cost optimization of language models."
+    },
+    "category": "operaciones",
+    "icon": "ph-gear-six",
+    "color": "cyan"
+  },
+  {
+    "term": "Markov Chain",
+    "full": {
+      "es": "Cadena de Markov",
+      "en": "Markov Chain"
+    },
+    "desc": {
+      "es": "Modelo estocástico que describe una secuencia de eventos donde la probabilidad de pasar al siguiente estado depende únicamente del estado presente.",
+      "en": "A stochastic model describing a sequence of events where the probability of moving to the next state depends only on the current state."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-merge",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Model Drift",
+    "full": {
+      "es": "Desviación del Modelo",
+      "en": "Model Drift"
+    },
+    "desc": {
+      "es": "Pérdida paulatina de efectividad de un modelo desplegado debido a que las condiciones del mundo real o el comportamiento de las variables cambian con el tiempo.",
+      "en": "The gradual loss of effectiveness of a deployed model as real-world conditions or variable behavior change over time."
+    },
+    "category": "operaciones",
+    "icon": "ph-trend-down",
+    "color": "cyan"
+  },
+  {
+    "term": "Predictive Analytics",
+    "full": {
+      "es": "Analítica Predictiva",
+      "en": "Predictive Analytics"
+    },
+    "desc": {
+      "es": "Uso coordinado de datos históricos, algoritmos estadísticos e IA para predecir la probabilidad de resultados o tendencias futuras.",
+      "en": "The coordinated use of historical data, statistical algorithms, and AI to predict the likelihood of future outcomes or trends."
+    },
+    "category": "fundamentales",
+    "icon": "ph-chart-line",
+    "color": "indigo"
+  },
+  {
+    "term": "Prompt Injection",
+    "full": {
+      "es": "Inyección de Prompts",
+      "en": "Prompt Injection"
+    },
+    "desc": {
+      "es": "Ciberataque enfocado en modelos de lenguaje mediante instrucciones ocultas o manipuladas para forzar a la IA a ignorar sus restricciones de seguridad.",
+      "en": "A cyberattack targeting language models through hidden or manipulated instructions designed to force the AI to ignore its safety restrictions."
+    },
+    "category": "uso",
+    "icon": "ph-shield-warning",
+    "color": "amber"
+  },
+  {
+    "term": "Reasoning Model",
+    "full": {
+      "es": "Modelo de Razonamiento",
+      "en": "Reasoning Model"
+    },
+    "desc": {
+      "es": "Arquitecturas de IA optimizadas para generar cadenas de lógica interna previa a la respuesta, permitiendo resolver problemas lógicos y matemáticos avanzados.",
+      "en": "AI architectures optimized to generate internal chains of logic before answering, enabling advanced logical and mathematical problem-solving."
+    },
+    "category": "fundamentales",
+    "icon": "ph-brain",
+    "color": "indigo"
+  },
+  {
+    "term": "SSL",
+    "full": {
+      "es": "Self-Supervised Learning (Aprendizaje Autosupervisado)",
+      "en": "Self-Supervised Learning"
+    },
+    "desc": {
+      "es": "Método donde la red neuronal genera sus propias tareas y etiquetas internas ocultando partes del dato de entrada (como palabras en una frase) para entrenarse.",
+      "en": "A method where the neural network generates its own internal tasks and labels by hiding parts of the input data (like words in a sentence) to train itself."
+    },
+    "category": "arquitectura",
+    "icon": "ph-arrows-clockwise",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Semantic Analysis",
+    "full": {
+      "es": "Análisis Semántico",
+      "en": "Semantic Analysis"
+    },
+    "desc": {
+      "es": "Proceso lingüístico computacional que extrae el significado intrínseco, intenciones y relaciones semánticas entre las palabras de una frase.",
+      "en": "A computational linguistics process that extracts the intrinsic meaning, intent, and semantic relationships between the words of a sentence."
+    },
+    "category": "fundamentales",
+    "icon": "ph-text-columns",
+    "color": "indigo"
+  },
+  {
+    "term": "Scaling Laws",
+    "full": {
+      "es": "Leyes de Escalamiento",
+      "en": "Scaling Laws"
+    },
+    "desc": {
+      "es": "Fórmulas empíricas que demuestran la mejora predecible en el rendimiento de un modelo a medida que aumentan el cómputo, el tamaño de parámetros y los datos.",
+      "en": "Empirical formulas showing the predictable improvement in a model's performance as compute, parameter count, and data all increase."
+    },
+    "category": "optimizacion",
+    "icon": "ph-chart-polar",
+    "color": "rose"
+  },
+  {
+    "term": "Spatial Intel.",
+    "full": {
+      "es": "Inteligencia Espacial",
+      "en": "Spatial Intelligence"
+    },
+    "desc": {
+      "es": "Capacidad de los modelos de IA para interpretar física y espacialmente imágenes o simulaciones tridimensionales y anticipar interacciones en el mundo real.",
+      "en": "An AI model's ability to physically and spatially interpret images or three-dimensional simulations and anticipate real-world interactions."
+    },
+    "category": "fundamentales",
+    "icon": "ph-compass",
+    "color": "indigo"
+  },
+  {
+    "term": "Synthetic Data",
+    "full": {
+      "es": "Datos Sintéticos",
+      "en": "Synthetic Data"
+    },
+    "desc": {
+      "es": "Información generada por algoritmos de IA en lugar de eventos reales, utilizada para entrenar modelos cuando los datos verdaderos son escasos o privados.",
+      "en": "Information generated by AI algorithms instead of real-world events, used to train models when genuine data is scarce or private."
+    },
+    "category": "operaciones",
+    "icon": "ph-files",
+    "color": "cyan"
+  },
+  {
+    "term": "Tensor",
+    "full": {
+      "es": "Tensor",
+      "en": "Tensor"
+    },
+    "desc": {
+      "es": "Estructura algebraica multidimensional de números que generaliza vectores y matrices, sirviendo de unidad base para procesar datos en deep learning.",
+      "en": "A multidimensional algebraic structure of numbers that generalizes vectors and matrices, serving as the base unit for processing data in deep learning."
+    },
+    "category": "arquitectura",
+    "icon": "ph-grid-four",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Tokenization",
+    "full": {
+      "es": "Tokenización",
+      "en": "Tokenization"
+    },
+    "desc": {
+      "es": "Etapa previa del NLP donde se segmenta una cadena de texto en fragmentos individuales (palabras o subpalabras) para asignarle a cada uno un vector numérico.",
+      "en": "An early NLP step where a string of text is broken into individual fragments (words or sub-words) so each can be assigned a numeric vector."
+    },
+    "category": "uso",
+    "icon": "ph-scissors",
+    "color": "amber"
+  },
+  {
+    "term": "ViT",
+    "full": {
+      "es": "Vision Transformer",
+      "en": "Vision Transformer"
+    },
+    "desc": {
+      "es": "Adaptación de la arquitectura Transformer diseñada para segmentar imágenes en parches cuadrados y procesarlos con mecanismos de atención masiva.",
+      "en": "An adaptation of the Transformer architecture designed to split images into square patches and process them with massive attention mechanisms."
+    },
+    "category": "arquitectura",
+    "icon": "ph-bounding-box",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Weights",
+    "full": {
+      "es": "Pesos de la Red Neuronal",
+      "en": "Neural Network Weights"
+    },
+    "desc": {
+      "es": "Parámetros matemáticos ajustables dentro de cada conexión de la red que ponderan la importancia relativa de cada dato procesado.",
+      "en": "Adjustable mathematical parameters within each connection of the network that weigh the relative importance of each piece of processed data."
+    },
+    "category": "arquitectura",
+    "icon": "ph-scales",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Latency",
+    "full": {
+      "es": "Latencia",
+      "en": "Latency"
+    },
+    "desc": {
+      "es": "Tiempo de respuesta medido en milisegundos desde que la solicitud ingresa al servidor de IA hasta que se entrega el primer o último token.",
+      "en": "Response time, measured in milliseconds, from when a request reaches the AI server until the first or last token is delivered."
+    },
+    "category": "operaciones",
+    "icon": "ph-timer",
+    "color": "cyan"
+  },
+  {
+    "term": "Style Transfer",
+    "full": {
+      "es": "Transferencia de Estilo",
+      "en": "Style Transfer"
+    },
+    "desc": {
+      "es": "Técnica de visión que extrae las características artísticas de una imagen fuente y las fusiona sobre la estructura de otra imagen de contenido.",
+      "en": "A vision technique that extracts the artistic characteristics of a source image and merges them onto the structure of another content image."
+    },
+    "category": "arquitectura",
+    "icon": "ph-paint-brush-broad",
+    "color": "fuchsia"
+  },
+  {
+    "term": "Sycophancy",
+    "full": {
+      "es": "Sicofancia Algorítmica",
+      "en": "Algorithmic Sycophancy"
+    },
+    "desc": {
+      "es": "Sesgo en LLMs donde el modelo da la razón al usuario de forma sumisa, incluso si la afirmación planteada es incorrecta o engañosa.",
+      "en": "A bias in LLMs where the model submissively agrees with the user, even when the claim being made is incorrect or misleading."
+    },
+    "category": "uso",
+    "icon": "ph-hand-thumbs-up",
+    "color": "amber"
+  },
+  {
+    "term": "Temperature",
+    "full": {
+      "es": "Temperatura",
+      "en": "Temperature"
+    },
+    "desc": {
+      "es": "Hiperparámetro de muestreo que regula la aleatoriedad en las respuestas de un LLM; valores bajos producen textos deterministas y altos generan variedad.",
+      "en": "A sampling hyperparameter that regulates the randomness of an LLM's responses; low values produce deterministic text, high values generate more variety."
+    },
+    "category": "uso",
+    "icon": "ph-thermometer",
+    "color": "amber"
+  },
+  {
+    "term": "Context Eng.",
+    "full": {
+      "es": "Ingeniería de Contexto",
+      "en": "Context Engineering"
+    },
+    "desc": {
+      "es": "Práctica avanzada de optimización del flujo de datos suministrado al prompt, agregando memorias y datos relevantes sin saturar la ventana.",
+      "en": "An advanced practice of optimizing the data flow supplied to the prompt, adding relevant memories and data without overloading the context window."
+    },
+    "category": "uso",
+    "icon": "ph-layout",
+    "color": "amber"
+  },
+  {
+    "term": "Guardrails",
+    "full": {
+      "es": "Rieles de Protección (Guardrails)",
+      "en": "Guardrails"
+    },
+    "desc": {
+      "es": "Sistemas de validación intermedios que analizan tanto las instrucciones de entrada como las respuestas salientes para bloquear contenido no ético o confidencial.",
+      "en": "Intermediate validation systems that analyze both incoming instructions and outgoing responses to block unethical or confidential content."
+    },
+    "category": "optimizacion",
+    "icon": "ph-shield-checkered",
+    "color": "rose"
+  },
+  {
+    "term": "Spec. Decoding",
+    "full": {
+      "es": "Decodificación Especulativa",
+      "en": "Speculative Decoding"
+    },
+    "desc": {
+      "es": "Estrategia de aceleración que usa un modelo pequeño y veloz para proponer ráfagas de tokens que luego son aceptados en bloque por el modelo principal.",
+      "en": "An acceleration strategy that uses a small, fast model to propose bursts of tokens, which are then accepted in bulk by the main model."
+    },
+    "category": "operaciones",
+    "icon": "ph-lightning",
+    "color": "cyan"
+  },
+  {
+    "term": "Test-Time Compute",
+    "full": {
+      "es": "Cómputo en Tiempo de Inferencia",
+      "en": "Test-Time Compute"
+    },
+    "desc": {
+      "es": "Asignación dinámica de capacidad de cómputo adicional durante la respuesta para permitir al modelo realizar búsquedas profundas o múltiples intentos de razonamiento.",
+      "en": "The dynamic allocation of extra compute capacity during a response, allowing the model to perform deep searches or multiple reasoning attempts."
+    },
+    "category": "optimizacion",
+    "icon": "ph-cpu",
+    "color": "rose"
   }
 ]

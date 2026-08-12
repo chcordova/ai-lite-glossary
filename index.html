@@ -38,34 +38,60 @@
 </header>
 
 <main class="flex-grow p-6 max-w-6xl mx-auto w-full">
-  <div class="mb-8 text-center md:text-left mt-4">
-    <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Descubre el idioma del futuro</h2>
-    <p class="text-slate-600 max-w-2xl">El mundo de la Inteligencia Artificial y automatización tiene su propio vocabulario. Usa este diccionario interactivo para entender cómo funciona la tecnología que está cambiando el mundo.</p>
+  <div class="mb-6 text-center md:text-left mt-4">
+    <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Habla el idioma que está redefiniendo el mundo</h2>
+    <p class="text-slate-600 max-w-2xl">La IA ya no solo genera texto: piensa, decide y actúa por sí misma, transformando cómo trabajamos, creamos y tomamos decisiones. Entender su vocabulario ya no es opcional, es la base para participar en esta nueva era. Este glosario te da las herramientas para descifrarlo, término a término.</p>
+  </div>
+
+  <!-- Stats Strip -->
+  <div class="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto md:mx-0">
+    <div class="bg-white rounded-xl border border-slate-200 px-4 py-3 flex items-center gap-3 shadow-sm">
+      <i class="ph ph-bookmarks-simple text-xl text-brand-600"></i>
+      <div>
+        <p class="text-lg font-bold text-slate-900 leading-none" id="statTotal">119</p>
+        <p class="text-xs text-slate-500">Términos mostrados</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 px-4 py-3 flex items-center gap-3 shadow-sm">
+      <i class="ph ph-translate text-xl text-brand-600"></i>
+      <div class="flex-grow">
+        <p class="text-xs text-slate-500 mb-1 leading-none">Idioma</p>
+        <div class="flex gap-1" id="langSwitch">
+          <!-- Language buttons are generated dynamically by app.js from SUPPORTED_LANGS -->
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Filter Buttons -->
-  <div class="flex flex-wrap gap-2 mb-8 justify-center md:justify-start" id="filterContainer">
+  <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start" id="filterContainer">
     <button class="filter-btn active px-4 py-2 rounded-full text-sm font-semibold transition-all bg-slate-800 text-white shadow-md hover:bg-slate-700" data-filter="all">
-      <i class="ph ph-squares-four mr-1"></i> Todos
+      <i class="ph ph-squares-four mr-1"></i> <span class="filter-label">Todos</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200" data-filter="fundamentales">
-      <i class="ph ph-brain mr-1"></i> Fundamentales
+      <i class="ph ph-brain mr-1"></i> <span class="filter-label">Fundamentales</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-fuchsia-50 hover:text-fuchsia-600 hover:border-fuchsia-200" data-filter="arquitectura">
-      <i class="ph ph-cpu mr-1"></i> Arquitectura
+      <i class="ph ph-cpu mr-1"></i> <span class="filter-label">Arquitectura</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" data-filter="automatizacion">
-      <i class="ph ph-robot mr-1"></i> Automatización
+      <i class="ph ph-robot mr-1"></i> <span class="filter-label">Automatización</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-amber-50 hover:text-amber-600 hover:border-amber-200" data-filter="uso">
-      <i class="ph ph-chat-teardrop-text mr-1"></i> Uso Diario
+      <i class="ph ph-chat-teardrop-text mr-1"></i> <span class="filter-label">Uso Diario</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200" data-filter="optimizacion">
-      <i class="ph ph-sliders mr-1"></i> Entrenamiento
+      <i class="ph ph-sliders mr-1"></i> <span class="filter-label">Entrenamiento</span>
     </button>
     <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-cyan-50 hover:text-cyan-600 hover:border-cyan-200" data-filter="operaciones">
-      <i class="ph ph-hard-drives mr-1"></i> Producción
+      <i class="ph ph-hard-drives mr-1"></i> <span class="filter-label">Producción</span>
     </button>
+  </div>
+
+  <!-- Category description panel (updates with selected filter and language) -->
+  <div id="categoryInfo" class="mb-8 px-4 py-3 rounded-xl border border-slate-200 bg-white/70 text-sm text-slate-600 flex items-start gap-2">
+    <i class="ph ph-info text-brand-600 mt-0.5"></i>
+    <span id="categoryInfoText">Explora las seis etapas del ciclo de vida de un sistema de IA: desde los fundamentos teóricos hasta la operación en producción.</span>
   </div>
 
   <!-- Cards Grid -->
@@ -84,7 +110,8 @@
 </main>
 
 <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-slate-500 text-sm">
-  <p>Literary and educational resource on AI & Machine Learning.</p>
+  <p>Recurso educativo sobre IA & Machine Learning.</p>
+  <p class="text-xs text-slate-400 mt-1">Terminología sintetizada a partir de Stanford HAI, MIT Media Lab, Andreessen Horowitz (a16z) y CNET · Localización al español 2026.</p>
 </footer>
 
 <script src="assets/js/app.js"></script>
