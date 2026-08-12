@@ -19,21 +19,21 @@ const SUPPORTED_LANGS = [
 const categoryLabels = {
   es: {
     all:             'Todos',
-    fundamentales:   'Conceptos Fundamentales',
-    arquitectura:    'Arquitectura y Proc.',
+    fundamentales:   'Conceptos Core',
+    arquitectura:    'Arquitectura.',
     automatizacion:  'Automatización',
     uso:             'Uso Diario',
     optimizacion:    'Entrenamiento',
-    operaciones:     'Producción (MLOps)'
+    operaciones:     'Producción'
   },
   en: {
     all:             'All',
     fundamentales:   'Core Concepts',
-    arquitectura:    'Architecture & Proc.',
+    arquitectura:    'Architecture',
     automatizacion:  'Automation',
     uso:             'Daily Usage',
     optimizacion:    'Training',
-    operaciones:     'Production (MLOps)'
+    operaciones:     'Production'
   }
 };
 
@@ -59,11 +59,18 @@ const categoryDescriptions = {
   }
 };
 
+// Small standalone UI strings that don't belong to categories.
+const uiStrings = {
+  es: { termsLabel: 'términos' },
+  en: { termsLabel: 'terms' }
+};
+
 const cardsGrid        = document.getElementById('cardsGrid');
 const emptyState       = document.getElementById('emptyState');
 const searchInput      = document.getElementById('searchInput');
 const filterBtns       = document.querySelectorAll('.filter-btn');
 const statTotal        = document.getElementById('statTotal');
+const statTotalLabel   = document.getElementById('statTotalLabel');
 const categoryInfoText = document.getElementById('categoryInfoText');
 const langSwitch       = document.getElementById('langSwitch');
 
@@ -90,22 +97,22 @@ function updateStaticTexts() {
     if (span) span.textContent = label(key);
   });
   categoryInfoText.textContent = description(currentFilter);
+  if (statTotalLabel) statTotalLabel.textContent = (uiStrings[currentLang] || uiStrings.es).termsLabel;
 }
 
 function setActiveLangButton() {
   langSwitch.querySelectorAll('.lang-btn').forEach(b => {
     const isActive = b.getAttribute('data-lang') === currentLang;
     b.classList.toggle('active', isActive);
-    b.classList.toggle('bg-slate-800', isActive);
+    b.classList.toggle('bg-slate-700', isActive);
     b.classList.toggle('text-white', isActive);
-    b.classList.toggle('bg-slate-100', !isActive);
-    b.classList.toggle('text-slate-600', !isActive);
+    b.classList.toggle('text-slate-400', !isActive);
   });
 }
 
 function renderLangSwitch() {
   langSwitch.innerHTML = SUPPORTED_LANGS.map(l => `
-    <button class="lang-btn text-xs font-semibold px-2 py-0.5 rounded-full transition-all" data-lang="${l.code}">${l.label}</button>
+    <button class="lang-btn text-[10px] font-semibold px-1.5 py-0.5 rounded-full transition-all" data-lang="${l.code}">${l.label}</button>
   `).join('');
 
   setActiveLangButton();
@@ -189,17 +196,13 @@ searchInput.addEventListener('input', (e) => {
 filterBtns.forEach(btn => {
   btn.addEventListener('click', (e) => {
     filterBtns.forEach(b => {
-      b.classList.remove('bg-slate-800', 'text-white', 'shadow-md');
-      b.classList.add('bg-white', 'text-slate-600');
+      b.classList.remove('active', 'bg-brand-50', 'text-brand-700', 'border-brand-200');
+      b.classList.add('bg-transparent', 'text-slate-500', 'border-transparent');
     });
 
     const targetBtn = e.currentTarget;
-    targetBtn.classList.remove(
-      'bg-white', 'text-slate-600',
-      'hover:bg-indigo-50', 'hover:bg-fuchsia-50', 'hover:bg-emerald-50',
-      'hover:bg-amber-50',  'hover:bg-rose-50',    'hover:bg-cyan-50'
-    );
-    targetBtn.classList.add('bg-slate-800', 'text-white', 'shadow-md');
+    targetBtn.classList.remove('bg-transparent', 'text-slate-500', 'border-transparent');
+    targetBtn.classList.add('active', 'bg-brand-50', 'text-brand-700', 'border-brand-200');
 
     currentFilter = targetBtn.getAttribute('data-filter');
     updateStaticTexts();
