@@ -68,6 +68,7 @@ const uiStrings = {
 const cardsGrid        = document.getElementById('cardsGrid');
 const emptyState       = document.getElementById('emptyState');
 const searchInput      = document.getElementById('searchInput');
+const searchClearBtn   = document.getElementById('searchClearBtn');
 const filterBtns       = document.querySelectorAll('.filter-btn');
 const statTotal        = document.getElementById('statTotal');
 const statTotalLabel   = document.getElementById('statTotalLabel');
@@ -188,9 +189,22 @@ function renderCards() {
   }
 }
 
+function toggleSearchClearBtn() {
+  searchClearBtn.classList.toggle('hidden', searchInput.value.length === 0);
+}
+
 searchInput.addEventListener('input', (e) => {
   searchQuery = e.target.value;
+  toggleSearchClearBtn();
   renderCards();
+});
+
+searchClearBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  searchQuery = '';
+  toggleSearchClearBtn();
+  renderCards();
+  searchInput.focus();
 });
 
 filterBtns.forEach(btn => {
